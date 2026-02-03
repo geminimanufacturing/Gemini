@@ -1,121 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Gemini Manufacturing & Co</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Gemini Manufacturing & Co</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f5f5f5;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0b0b;
+  color: #f2f2f2;
+}
+a { text-decoration: none; color: inherit; }
 
-    a { text-decoration: none; color: inherit; }
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  padding: 16px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.85);
-      padding: 14px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
-    }
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d4af37;
+}
 
-    .logo {
-      font-size: 20px;
-      font-weight: 600;
-      color: #d4af37;
-    }
+nav a {
+  margin-left: 26px;
+  font-size: 14px;
+  color: #ccc;
+}
+nav a:hover { color: #fff; }
 
-    nav a {
-      margin-left: 24px;
-      font-size: 14px;
-      color: #ccc;
-    }
+.hero {
+  padding: 90px 40px 60px;
+  text-align: center;
+}
+.hero h1 { font-size: 42px; margin-bottom: 12px; }
+.hero p { color: #bbb; }
 
-    nav a:hover { color: #fff; }
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 40px;
+}
 
-    .hero {
-      padding: 80px 40px 50px;
-      text-align: center;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 28px;
+}
 
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+.card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 28px;
+}
+.card h3 { margin-top: 0; }
 
-    .hero p {
-      color: #bbb;
-      font-size: 16px;
-    }
+footer {
+  border-top: 1px solid #222;
+  padding: 34px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
 
-    .section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 40px;
-    }
+.socials svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  fill: #d4af37;
+  transition: 0.3s ease;
+}
+.socials svg:hover { transform: scale(1.2); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: #151515;
-      border: 1px solid #222;
-      border-radius: 14px;
-      padding: 30px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 20px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #aaa;
-      line-height: 1.6;
-    }
-
-    footer {
-      padding: 30px 40px;
-      text-align: center;
-      border-top: 1px solid #222;
-      font-size: 13px;
-      color: #777;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      font-size: 18px;
-      color: #aaa;
-    }
-
-    .socials a:hover { color: #d4af37; }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #25d366;
-      color: #000;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp:hover { transform: scale(1.1); }
-  </style>
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.whatsapp:hover { transform: scale(1.1); }
+</style>
 </head>
 
 <body>
@@ -133,7 +110,7 @@
 
 <section class="hero">
   <h1>Contact Us</h1>
-  <p>Reach out for enquiries, catalogs or custom manufacturing requests</p>
+  <p>For catalogs, enquiries and custom manufacturing</p>
 </section>
 
 <section class="section">
@@ -171,11 +148,11 @@
 
 <footer>
   <div class="socials">
-    <a href="#">🔗</a>
-    <a href="#">📷</a>
-    <a href="#">💼</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4a4.6 4.6 0 0 1 1.7 1.1 4.6 4.6 0 0 1 1.1 1.7c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3a4.6 4.6 0 0 1-1.1 1.7 4.6 4.6 0 0 1-1.7 1.1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a4.6 4.6 0 0 1-1.7-1.1 4.6 4.6 0 0 1-1.1-1.7c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3a4.6 4.6 0 0 1 1.1-1.7 4.6 4.6 0 0 1 1.7-1.1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h5v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.1 3.4 6.1 7.8V24h-5v-7.6c0-1.8 0-4.2-2.6-4.2s-3 2-3 4v7.8H8z"/></svg></a>
   </div>
-  © 2025 Gemini Manufacturing & Co. All rights reserved.
+  © 2025 Gemini Manufacturing & Co. All rights reserved
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
