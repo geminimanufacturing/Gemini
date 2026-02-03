@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gemini Manufacturing | FRP Products</title>
-  <meta name="description" content="Gemini Manufacturing – Premium FRP mannequins, fountains, planters, props, profiles, and sculptures." />
+
+  <title>FRP Mannequins India | Gemini Mannequins</title>
+  <meta name="description" content="Premium FRP Mannequins in India. Custom, ready-made, life-size & abstract mannequins for retail, fashion & exhibitions." />
+  <meta name="keywords" content="FRP Mannequins India, Fiberglass Mannequins, Retail Mannequins, Custom Mannequins, Exhibition Mannequins" />
+
   <style>
     :root {
-      --primary: #1f2937; /* dark slate */
-      --secondary: #0ea5e9; /* sky blue */
-      --light: #f9fafb;
-      --muted: #6b7280;
+      --black: #0b0b0b;
+      --gold: #c9a24d;
+      --gold-soft: #e6d29a;
+      --white: #ffffff;
+      --muted: #9ca3af;
     }
 
     * {
@@ -21,18 +25,21 @@
     }
 
     body {
-      background: var(--light);
-      color: var(--primary);
+      background: var(--black);
+      color: var(--white);
       line-height: 1.6;
     }
+
+    a { color: inherit; text-decoration: none; }
 
     /* NAVBAR */
     header {
       position: sticky;
       top: 0;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
+      background: rgba(11,11,11,0.9);
+      border-bottom: 1px solid rgba(201,162,77,0.2);
       z-index: 100;
+      backdrop-filter: blur(8px);
     }
 
     .nav {
@@ -47,21 +54,23 @@
     .brand {
       font-size: 1.4rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      color: var(--gold);
     }
 
     .nav a {
       margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--primary);
       font-weight: 500;
+      color: var(--white);
+      opacity: 0.9;
     }
 
-    /* HERO */
+    .nav a:hover { color: var(--gold); }
+
+    /* HERO – MANNEQUINS */
     .hero {
-      background: linear-gradient(to right, #020617, #0f172a);
-      color: white;
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
     .hero-content {
@@ -74,157 +83,252 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 1rem;
+      color: var(--gold-soft);
     }
 
     .hero p {
-      color: #cbd5f5;
+      color: #d1d5db;
       font-size: 1.1rem;
       margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
-      background: var(--secondary);
-      color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: 600;
+      transition: all 0.3s ease;
     }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #000;
+    }
+
+    .btn-gold:hover { transform: translateY(-2px); }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover { background: var(--gold); color: #000; }
 
     /* SECTIONS */
-    section {
-      padding: 4rem 1rem;
-    }
+    section { padding: 4.5rem 1rem; }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
+    .container { max-width: 1200px; margin: auto; }
 
     .section-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
       text-align: center;
+      color: var(--gold-soft);
     }
 
-    /* PRODUCTS */
-    .grid {
+    /* USE CASES */
+    .use-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
     }
 
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    .use-card {
+      padding: 2.2rem;
+      background: #111;
+      border: 1px solid rgba(201,162,77,0.15);
+      border-radius: 1.2rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .use-card:hover { transform: translateY(-6px); }
+
+    .use-card h3 { margin-bottom: 0.6rem; color: var(--gold); }
+
+    .use-card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* MANNEQUIN TYPES */
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
     }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* ABOUT */
-    .about {
-      background: #f1f5f9;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #020617;
-      color: #cbd5f5;
-      padding: 2rem 1rem;
+    .type-card {
+      background: linear-gradient(180deg, #111, #050505);
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(201,162,77,0.18);
       text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .type-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(201,162,77,0.12);
+    }
+
+    .type-card h3 { color: var(--gold); margin-bottom: 0.5rem; }
+
+    .type-card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* PRODUCTS (IMAGE READY) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .product-card {
+      background: #0e0e0e;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(201,162,77,0.18);
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover { transform: translateY(-8px); }
+
+    .product-img {
+      height: 260px;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
       font-size: 0.9rem;
     }
 
+    .product-info { padding: 1.5rem; }
+
+    .product-info h3 { color: var(--gold); margin-bottom: 0.3rem; }
+
+    .product-info p { color: var(--muted); font-size: 0.9rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(201,162,77,0.2);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    .socials {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .socials a:hover { color: var(--gold); }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      z-index: 999;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
     @media (max-width: 768px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .hero-actions { justify-content: center; }
+      .hero h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="brand">GEMINI MANUFACTURING</div>
-      <nav>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav">
+    <div class="brand">GEMINI MANNEQUINS</div>
+    <nav>
+      <a href="mannequins.html">Mannequins</a>
+      <a href="catalog.pdf" download>View Catalog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div>
-        <h1>Premium FRP Mannequins & Sculptural Products</h1>
-        <p>Designing durable, lightweight, and custom FRP solutions for retail, architecture, and public spaces.</p>
-        <a class="btn" href="#contact">Get in Touch</a>
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <h1>FRP Mannequins Crafted for Impact</h1>
+      <p>Premium fiberglass mannequins for retail, fashion displays and exhibitions across India.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="catalog.pdf" download>View Catalog</a>
+        <a class="btn btn-outline" href="mannequins.html">Explore Mannequins</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="products">
-    <div class="container">
-      <h2 class="section-title">Our FRP Product Range</h2>
-      <div class="grid">
-        <div class="card"><h3>Mannequins</h3><p>Retail, fashion, and custom display mannequins.</p></div>
-        <div class="card"><h3>Water Fountains</h3><p>Indoor & outdoor decorative FRP fountains.</p></div>
-        <div class="card"><h3>Planters & Pots</h3><p>Weather-resistant modern FRP planters.</p></div>
-        <div class="card"><h3>Props</h3><p>Theme-based and commercial props.</p></div>
-        <div class="card"><h3>Profiles</h3><p>Architectural FRP profiles & elements.</p></div>
-        <div class="card"><h3>Sculptures</h3><p>Custom-designed FRP sculptures.</p></div>
-      </div>
+<section>
+  <div class="container">
+    <h2 class="section-title">Use Cases</h2>
+    <div class="use-grid">
+      <div class="use-card"><h3>Retail</h3><p>Showcase garments with realistic posture and finish.</p></div>
+      <div class="use-card"><h3>Fashion</h3><p>Editorial, runway and showroom presentations.</p></div>
+      <div class="use-card"><h3>Exhibitions</h3><p>Visual storytelling for brands and events.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Gemini Manufacturing</h2>
-      <p style="max-width: 800px; margin: auto; text-align: center; color: #374151;">
-        Gemini Manufacturing specializes in Fiber Reinforced Plastic (FRP) products that combine strength,
-        aesthetics, and long-term durability. From mannequins to architectural installations, we create
-        custom-built solutions tailored to your vision.
-      </p>
+<section>
+  <div class="container">
+    <h2 class="section-title">Mannequin Types</h2>
+    <div class="types-grid">
+      <div class="type-card"><h3>Custom</h3><p>Designed to your exact pose and finish.</p></div>
+      <div class="type-card"><h3>Ready-made</h3><p>Quick delivery standard models.</p></div>
+      <div class="type-card"><h3>Life-size</h3><p>Realistic proportions & detailing.</p></div>
+      <div class="type-card"><h3>Abstract</h3><p>Minimal, modern & artistic forms.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p style="text-align:center; color: var(--muted);">
-        📞 Phone / WhatsApp: +91-XXXXXXXXXX<br />
-        📧 Email: info@geminimanufacturing.com
-      </p>
+<section>
+  <div class="container">
+    <h2 class="section-title">Featured Mannequins</h2>
+    <div class="product-grid">
+      <div class="product-card"><div class="product-img">Image here</div><div class="product-info"><h3>Male Mannequin</h3><p>FRP | Matte Finish</p></div></div>
+      <div class="product-card"><div class="product-img">Image here</div><div class="product-info"><h3>Female Mannequin</h3><p>FRP | Gloss Finish</p></div></div>
+      <div class="product-card"><div class="product-img">Image here</div><div class="product-info"><h3>Abstract Form</h3><p>FRP | Modern Design</p></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Gemini Manufacturing. All rights reserved.
-  </footer>
+<footer>
+  <div class="socials">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+  </div>
+  © 2025 Gemini Mannequins. All rights reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">🟢</a>
 
 </body>
 </html>
