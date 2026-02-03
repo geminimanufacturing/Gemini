@@ -1,216 +1,81 @@
+<!-- Gemini Manufacturing & Co. Full Polished Multi-Page HTML -- placeholder version with premium styling, animations, and consistent navbar/footer -->
+
+<!-- 1️⃣ index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Gemini Manufacturing & Co. | FRP Products India</title>
-  <meta name="description" content="Gemini Manufacturing & Co. – Premium FRP manufacturing in India. Mannequins, planters, sculptures, props, fountains and architectural profiles." />
-  <meta name="keywords" content="FRP Manufacturing India, FRP Mannequins, FRP Planters, FRP Sculptures, Fiberglass Products" />
-
-  <style>
-    :root {
-      --black: #0b0b0b;
-      --gold: #c9a24d;
-      --gold-soft: #e6d29a;
-      --white: #ffffff;
-      --muted: #9ca3af;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-
-    body { background: var(--black); color: var(--white); line-height: 1.6; }
-
-    a { text-decoration: none; color: inherit; }
-
-    /* NAVBAR */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(11,11,11,0.9);
-      border-bottom: 1px solid rgba(201,162,77,0.2);
-      backdrop-filter: blur(8px);
-    }
-
-    .nav {
-      max-width: 1200px; margin: auto; padding: 1rem;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-
-    .brand { font-size: 1.4rem; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); }
-
-    .nav a { margin-left: 1.5rem; font-weight: 500; opacity: 0.9; }
-    .nav a:hover { color: var(--gold); }
-
-    /* HERO */
-    .hero {
-      padding: 6rem 1rem;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      text-align: center;
-    }
-
-    .hero h1 { font-size: 3.2rem; color: var(--gold-soft); margin-bottom: 1rem; }
-    .hero p { max-width: 760px; margin: auto; color: #d1d5db; font-size: 1.1rem; }
-
-    /* SECTIONS */
-    section { padding: 4.5rem 1rem; }
-    .container { max-width: 1200px; margin: auto; }
-
-    .section-title {
-      text-align: center; font-size: 2.2rem; color: var(--gold-soft);
-      margin-bottom: 2.5rem;
-    }
-
-    /* PRODUCT CATEGORIES */
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .category-card {
-      background: linear-gradient(180deg, #111, #050505);
-      border: 1px solid rgba(201,162,77,0.18);
-      border-radius: 1.6rem;
-      overflow: hidden;
-      transition: all 0.4s ease;
-    }
-
-    .category-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 25px 45px rgba(201,162,77,0.15);
-    }
-
-    .category-img {
-      height: 240px;
-      background: #1a1a1a;
-      display: flex; align-items: center; justify-content: center;
-      color: #666; font-size: 0.95rem;
-    }
-
-    .category-info { padding: 1.8rem; }
-
-    .category-info h3 { color: var(--gold); margin-bottom: 0.5rem; }
-    .category-info p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-
-    .explore { color: var(--gold-soft); font-weight: 600; }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid rgba(201,162,77,0.2);
-      padding: 2.5rem 1rem; text-align: center;
-      color: #9ca3af; font-size: 0.9rem;
-    }
-
-    .socials { margin: 1.5rem 0; display: flex; justify-content: center; gap: 1.5rem; }
-    .socials a:hover { color: var(--gold); }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed; bottom: 20px; right: 20px;
-      background: #25D366; color: white;
-      width: 56px; height: 56px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; z-index: 999;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini Manufacturing & Co. | Premium FRP Products</title>
+<meta name="description" content="Gemini Manufacturing & Co. produces premium FRP Mannequins, Planters, Sculptures, Props, and Fountains in India.">
+<meta name="keywords" content="FRP Mannequins India, FRP Planters India, FRP Sculptures, Custom FRP Products">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Global Styles */
+:root {--black:#0f0f0f; --gold:#c9a44c; --light:#f5f5f5;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--black);color:var(--light);line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08);}
+header h1{font-size:1.4rem;font-weight:500;}
+nav a{margin-left:24px;font-size:0.9rem;opacity:0.8;transition:opacity 0.3s,color 0.3s;}
+nav a:hover{color:var(--gold);opacity:1;}
+.hero{padding:120px 8% 80px;text-align:center;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+.hero.visible{opacity:1;transform:translateY(0);}
+.hero h2{font-size:2.6rem;margin-bottom:16px;}
+.hero span{color:var(--gold);}
+.hero p{max-width:780px;margin:auto;font-size:1rem;opacity:0.85;}
+.section{padding:80px 8%;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+.section.visible{opacity:1;transform:translateY(0);}
+.section h3{text-align:center;font-size:1.8rem;margin-bottom:50px;color:var(--gold);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
+.card{background:#161616;padding:28px;border-radius:14px;text-align:center;transition:transform 0.4s ease, box-shadow 0.4s ease;}
+.card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(0,0,0,0.5);}
+.card h4{color:var(--gold);margin-bottom:10px;font-weight:500;}
+.card p{font-size:0.9rem;opacity:0.8;}
+.cta{text-align:center;padding:60px 8% 80px;}
+.cta a{display:inline-block;padding:14px 34px;border:1px solid var(--gold);border-radius:30px;font-size:0.9rem;transition:all 0.3s ease;}
+.cta a:hover{background:var(--gold);color:var(--black);}
+footer{padding:30px 8%;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:0.8rem;opacity:0.6;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-size:0.9rem;box-shadow:0 10px 25px rgba(0,0,0,0.4);}
+</style>
 </head>
 <body>
-
 <header>
-  <div class="nav">
-    <div class="brand">GEMINI MANUFACTURING & CO.</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="mannequins.html">Mannequins</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<h1>Gemini Manufacturing & Co.</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="mannequins.html">Mannequins</a>
+<a href="planters.html">Planters</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
-
 <section class="hero">
-  <h1>Premium FRP Manufacturing</h1>
-  <p>Gemini Manufacturing & Co. designs and manufactures high-quality Fiber Reinforced Plastic (FRP) products for retail, architecture, exhibitions and public spaces across India.</p>
+<h2>Premium <span>FRP Products</span></h2>
+<p>Gemini Manufacturing & Co. offers Mannequins, Planters, Sculptures, Props, and Fountains crafted from durable, lightweight Fiber Reinforced Plastic (FRP) for commercial and residential applications.</p>
 </section>
-
-<section>
-  <div class="container">
-    <h2 class="section-title">Our FRP Product Categories</h2>
-    <div class="category-grid">
-
-      <a href="mannequins.html" class="category-card">
-        <div class="category-img">Mannequin Image</div>
-        <div class="category-info">
-          <h3>Gemini Mannequins</h3>
-          <p>Custom, ready-made, life-size and abstract FRP mannequins.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-      <a href="planters.html" class="category-card">
-        <div class="category-img">Planter Image</div>
-        <div class="category-info">
-          <h3>Planters & Pots</h3>
-          <p>Durable and aesthetic FRP planters for indoor & outdoor use.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-      <a href="sculptures.html" class="category-card">
-        <div class="category-img">Sculpture Image</div>
-        <div class="category-info">
-          <h3>Sculptures</h3>
-          <p>Custom-designed FRP sculptures for public and private spaces.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-      <a href="props.html" class="category-card">
-        <div class="category-img">Props Image</div>
-        <div class="category-info">
-          <h3>Props</h3>
-          <p>FRP props for events, exhibitions and themed environments.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-      <a href="fountains.html" class="category-card">
-        <div class="category-img">Fountain Image</div>
-        <div class="category-info">
-          <h3>Water Fountains</h3>
-          <p>Decorative FRP fountains for landscapes and interiors.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-      <a href="profiles.html" class="category-card">
-        <div class="category-img">Profile Image</div>
-        <div class="category-info">
-          <h3>Architectural Profiles</h3>
-          <p>FRP profiles and design elements for architecture.</p>
-          <span class="explore">Explore →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
+<section class="section">
+<h3>Our Categories</h3>
+<div class="grid">
+<div class="card"><h4>Mannequins</h4><p>Fashion, retail, and exhibition FRP mannequins.</p></div>
+<div class="card"><h4>Planters & Pots</h4><p>Indoor and outdoor FRP planters for modern spaces.</p></div>
+<div class="card"><h4>Sculptures</h4><p>Custom FRP sculptures for branding and decor.</p></div>
+<div class="card"><h4>Props & Fountains</h4><p>Architectural FRP props, fountains, and profiles.</p></div>
+</div>
 </section>
-
-<footer>
-  <div class="socials">
-    <a href="#">Facebook</a>
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-  </div>
-  © 2025 Gemini Manufacturing & Co. All rights reserved.
-</footer>
-
-<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">🟢</a>
-
+<section class="cta">
+<a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a>
+</section>
+<footer>© 2025 Gemini Manufacturing & Co. All rights reserved</footer>
+<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
+<script>
+window.addEventListener('scroll',()=>{
+document.querySelectorAll('.section, .hero').forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){el.classList.add('visible');}
+});
+});
+</script>
 </body>
 </html>
