@@ -1,23 +1,19 @@
-<!-- Gemini Manufacturing & Co. Full Polished Multi-Page HTML -- placeholder version with premium styling, animations, and consistent navbar/footer -->
-
-<!-- 1️⃣ index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gemini Manufacturing & Co. | Premium FRP Products</title>
-<meta name="description" content="Gemini Manufacturing & Co. produces premium FRP Mannequins, Planters, Sculptures, Props, and Fountains in India.">
-<meta name="keywords" content="FRP Mannequins India, FRP Planters India, FRP Sculptures, Custom FRP Products">
+<title>Gemini Manufacturing & Co.</title>
+<meta name="description" content="Gemini Manufacturing & Co. - Premium FRP Products: Mannequins, Planters, Sculptures, Props, Fountains, Profiles">
+<meta name="keywords" content="FRP Mannequins, FRP Planters, FRP Sculptures, FRP Props, FRP Fountains, Architectural Profiles India">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Global Styles */
 :root {--black:#0f0f0f; --gold:#c9a44c; --light:#f5f5f5;}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:var(--black);color:var(--light);line-height:1.7;}
 a{text-decoration:none;color:inherit;}
 header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08);}
-header h1{font-size:1.4rem;font-weight:500;}
+header h1{font-size:1.4rem;font-weight:600;color:var(--gold);}
 nav a{margin-left:24px;font-size:0.9rem;opacity:0.8;transition:opacity 0.3s,color 0.3s;}
 nav a:hover{color:var(--gold);opacity:1;}
 .hero{padding:120px 8% 80px;text-align:center;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
@@ -31,13 +27,18 @@ nav a:hover{color:var(--gold);opacity:1;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
 .card{background:#161616;padding:28px;border-radius:14px;text-align:center;transition:transform 0.4s ease, box-shadow 0.4s ease;}
 .card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(0,0,0,0.5);}
+.card img{width:100%;border-radius:12px;margin-bottom:12px;}
 .card h4{color:var(--gold);margin-bottom:10px;font-weight:500;}
 .card p{font-size:0.9rem;opacity:0.8;}
 .cta{text-align:center;padding:60px 8% 80px;}
 .cta a{display:inline-block;padding:14px 34px;border:1px solid var(--gold);border-radius:30px;font-size:0.9rem;transition:all 0.3s ease;}
 .cta a:hover{background:var(--gold);color:var(--black);}
 footer{padding:30px 8%;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:0.8rem;opacity:0.6;}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-size:0.9rem;box-shadow:0 10px 25px rgba(0,0,0,0.4);}
+.social-icons{margin-top:10px;}
+.social-icons a{margin:0 12px;color:var(--light);transition:color 0.3s;}
+.social-icons a:hover{color:var(--gold);}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-size:0.9rem;box-shadow:0 10px 25px rgba(0,0,0,0.4);transition:all 0.3s;}
+.whatsapp:hover{transform:scale(1.1);}
 </style>
 </head>
 <body>
@@ -51,31 +52,74 @@ footer{padding:30px 8%;border-top:1px solid rgba(255,255,255,0.08);text-align:ce
 <a href="contact.html">Contact</a>
 </nav>
 </header>
+
 <section class="hero">
-<h2>Premium <span>FRP Products</span></h2>
-<p>Gemini Manufacturing & Co. offers Mannequins, Planters, Sculptures, Props, and Fountains crafted from durable, lightweight Fiber Reinforced Plastic (FRP) for commercial and residential applications.</p>
+<h2>Welcome to <span>Gemini Manufacturing & Co.</span></h2>
+<p>We craft premium FRP products including Mannequins, Planters, Sculptures, Props, Fountains, and Architectural Profiles for commercial and residential applications.</p>
 </section>
+
 <section class="section">
-<h3>Our Categories</h3>
+<h3>Our Product Categories</h3>
 <div class="grid">
-<div class="card"><h4>Mannequins</h4><p>Fashion, retail, and exhibition FRP mannequins.</p></div>
-<div class="card"><h4>Planters & Pots</h4><p>Indoor and outdoor FRP planters for modern spaces.</p></div>
-<div class="card"><h4>Sculptures</h4><p>Custom FRP sculptures for branding and decor.</p></div>
-<div class="card"><h4>Props & Fountains</h4><p>Architectural FRP props, fountains, and profiles.</p></div>
+<div class="card">
+<img src="https://s.alicdn.com/@sc04/kf/Hfe7dd9f81d4e4abfbb5b936eee4dd96dQ/Professional-Skiing-FRP-Models-Full-Body-Male-Model-Props-Sports-Clothing-Store-Ski-Suit-Stand-Female-Mannequin.jpg" alt="Mannequins">
+<h4>Mannequins</h4>
+<p>Retail, fashion, male & female FRP mannequins. <!-- TODO: Replace with actual catalog image --></p>
+</div>
+<div class="card">
+<img src="https://www.jiomart.com/images/product/original/rvab4xjtrk/sevou-rex-balcony-railing-planter-hanging-flower-pots-for-grills-home-gardening-outdoor-rectangular-metal-plant-pots-12-inches-pack-of-6-multicolor-product-images-orvab4xjtrk-p609955080-0-202409122250.jpg?im=Resize%3D(1000,1000)" alt="Planters">
+<h4>Planters</h4>
+<p>Indoor, outdoor, balcony, terrace planters. <!-- TODO: Replace with actual catalog image --></p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300?text=Sculptures" alt="Sculptures">
+<h4>Sculptures</h4>
+<p>Decorative and custom sculptures. <!-- TODO: Replace with actual catalog image --></p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300?text=Props" alt="Props">
+<h4>Props</h4>
+<p>Event and commercial props. <!-- TODO: Replace with actual catalog image --></p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300?text=Fountains" alt="Fountains">
+<h4>Fountains</h4>
+<p>FRP fountains for gardens and interiors. <!-- TODO: Replace with actual catalog image --></p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x300?text=Architectural+Profiles" alt="Profiles">
+<h4>Architectural Profiles</h4>
+<p>Custom FRP profiles for architecture. <!-- TODO: Replace with actual catalog image --></p>
+</div>
 </div>
 </section>
+
 <section class="cta">
 <a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a>
 </section>
-<footer>© 2025 Gemini Manufacturing & Co. All rights reserved</footer>
+
+<footer>
+© 2025 Gemini Manufacturing & Co. All rights reserved
+<div class="social-icons">
+<a href="#" title="Facebook">FB</a> <!-- TODO: Replace '#' with actual URL -->
+<a href="#" title="Instagram">IG</a> <!-- TODO: Replace '#' with actual URL -->
+<a href="#" title="LinkedIn">LI</a> <!-- TODO: Replace '#' with actual URL -->
+</div>
+</footer>
+
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
+
 <script>
-window.addEventListener('scroll',()=>{
-document.querySelectorAll('.section, .hero').forEach(el=>{
-const rect=el.getBoundingClientRect();
-if(rect.top<window.innerHeight-100){el.classList.add('visible');}
-});
-});
+function revealOnScroll() {
+  document.querySelectorAll('.section, .hero').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 </script>
 </body>
 </html>
