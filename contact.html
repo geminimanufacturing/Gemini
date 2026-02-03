@@ -3,28 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Gemini Manufacturing</title>
+
+<title>Contact Gemini Manufacturing & Co.</title>
+
+<meta name="description" content="Contact Gemini Manufacturing & Co. – FRP Mannequins, Planters & Custom FRP Products.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-:root{--bg:#0c0c0c;--card:#151515;--gold:#c9a44c;--text:#eaeaea;--muted:#9a9a9a}
+:root{
+  --bg:#0c0c0c;
+  --card:#151515;
+  --gold:#c9a44c;
+  --text:#eaeaea;
+  --muted:#9a9a9a;
+}
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
 body{background:var(--bg);color:var(--text)}
 a{text-decoration:none;color:inherit}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+
+/* HEADER */
+header{
+  padding:22px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
 header h1{color:var(--gold);font-size:1.35rem;font-weight:500}
 nav a{margin-left:26px;font-size:.9rem;color:var(--muted)}
 nav a:hover{color:var(--gold)}
-.hero{text-align:center;padding:110px 8% 80px}
+
+/* HERO */
+.hero{
+  padding:110px 8% 80px;
+  text-align:center;
+}
 .hero h2{font-size:2.6rem;font-weight:500}
 .hero span{color:var(--gold)}
 .hero p{max-width:760px;margin:22px auto;color:var(--muted)}
-.section{text-align:center;padding:90px 8%}
-.section p{color:var(--muted);line-height:2}
-footer{text-align:center;padding:30px 8%;border-top:1px solid rgba(255,255,255,.06);font-size:.8rem;color:var(--muted)}
-.social a{margin:0 14px}
-  /* WHATSAPP */
+
+/* SECTION */
+.section{padding:90px 8%}
+.section h3{text-align:center;color:var(--gold);margin-bottom:40px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+}
+.card{
+  background:var(--card);
+  border-radius:16px;
+  padding:32px;
+  border:1px solid rgba(255,255,255,.05);
+}
+.card h4{color:var(--gold);margin-bottom:12px}
+.card p{color:var(--muted);font-size:.9rem;line-height:1.6}
+
+/* FOOTER */
+footer{
+  padding:30px 8%;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
+  font-size:.8rem;
+  color:var(--muted);
+}
+.social{margin-bottom:12px}
+.social a{
+  margin:0 14px;
+  font-size:1rem;
+  color:var(--gold);
+  transition:.3s;
+}
+.social a:hover{transform:translateY(-3px);opacity:.85}
+
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:22px;
@@ -34,13 +89,10 @@ footer{text-align:center;padding:30px 8%;border-top:1px solid rgba(255,255,255,.
   padding:14px 18px;
   border-radius:50px;
   font-size:.85rem;
-  transition:.3s ease;
+  transition:.3s;
   z-index:999;
 }
-.whatsapp:hover{
-  transform:scale(1.12);
-}
-
+.whatsapp:hover{transform:scale(1.12)}
 </style>
 </head>
 
@@ -60,28 +112,55 @@ footer{text-align:center;padding:30px 8%;border-top:1px solid rgba(255,255,255,.
 <section class="hero">
   <h2>Contact <span>Us</span></h2>
   <p>
-    Let’s discuss your FRP manufacturing requirements.
+    Reach out to our team for inquiries, catalogs and custom FRP solutions.
   </p>
 </section>
 
 <section class="section">
-  <p>
-    📍 India<br>
-    📞 +91 89044 42714<br>
-    ✉️ info@geminimanufacturing.com
-    <br><br>
-    <!-- CONTACT FORM PLACEHOLDER -->
-  </p>
+<h3>Get in Touch</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4>Pooja Manubolu</h4>
+<p>
+BDM & Marketing<br>
+📞 8904442714<br>
+✉ pooja@geminimannequins.in
+</p>
+</div>
+
+<div class="card">
+<h4>Uday Kiran</h4>
+<p>
+Founder<br>
+📞 9502066865<br>
+✉ uday@geminimannequins.in
+</p>
+</div>
+
+<div class="card">
+<h4>Service Regions</h4>
+<p>
+Karnataka<br>
+Telangana<br>
+Andhra Pradesh
+</p>
+</div>
+
+</div>
 </section>
 
 <footer>
   <div class="social">
-    <a href="#">Facebook</a>
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
+    <!-- TODO: Replace # with real social media links -->
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
   </div>
-  © 2025 Gemini Manufacturing
+  © 2025 Gemini Manufacturing & Co.
 </footer>
+
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">
   WhatsApp
 </a>
