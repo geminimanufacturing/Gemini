@@ -1,12 +1,55 @@
-<!-- 4️⃣ about.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>...similar header and SEO...</head>
-<body>...hero: About Gemini Manufacturing & Co...
-<section class="section"><h3>Our Divisions</h3><div class="grid"><div class="card"><h4>Mannequins</h4><p>Premium mannequins for retail and fashion.</p></div><div class="card"><h4>Planters</h4><p>Indoor and outdoor FRP planters.</p></div><div class="card"><h4>Sculptures & Props</h4><p>Custom decorative and branding sculptures.</p></div><div class="card"><h4>Fountains & Profiles</h4><p>Architectural FRP elements and fountains.</p></div></div></section>
-<section class="cta"><a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a></section>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Gemini Manufacturing & Co.</title>
+<meta name="description" content="Learn about Gemini Manufacturing & Co. and our FRP product divisions including Mannequins, Planters, Sculptures, Props, and Fountains.">
+<meta name="keywords" content="Gemini Manufacturing India, FRP Mannequins, FRP Planters, FRP Sculptures, About Us">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>/* Same CSS as mannequins.html */</style>
+</head>
+<body>
+<header>
+<h1>Gemini Manufacturing & Co.</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="mannequins.html">Mannequins</a>
+<a href="planters.html">Planters</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>About <span>Gemini Manufacturing & Co.</span></h2>
+<p>We craft high-quality FRP products including Mannequins, Planters, Sculptures, Props, and Fountains for diverse commercial and residential applications.</p>
+</section>
+
+<section class="section">
+<h3>Our Divisions</h3>
+<div class="grid">
+<div class="card"><h4>Mannequins</h4><p>Premium mannequins for retail and fashion.</p></div>
+<div class="card"><h4>Planters</h4><p>Indoor and outdoor FRP planters.</p></div>
+<div class="card"><h4>Sculptures & Props</h4><p>Custom decorative and branding sculptures.</p></div>
+<div class="card"><h4>Fountains & Profiles</h4><p>Architectural FRP elements and fountains.</p></div>
+</div>
+</section>
+
+<section class="cta">
+<a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a>
+</section>
+
 <footer>© 2025 Gemini Manufacturing & Co. All rights reserved</footer>
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
-<script>/* scroll animations */</script>
+
+<script>
+window.addEventListener('scroll',()=>{
+document.querySelectorAll('.section, .hero').forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){el.classList.add('visible');}
+});
+});
+</script>
 </body>
 </html>
