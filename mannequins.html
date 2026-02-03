@@ -2,63 +2,240 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gemini Mannequins | FRP Mannequins India</title>
-<meta name="description" content="FRP Mannequins for Retail & Fashion – Male, Female, Life-size, Abstract">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gemini Mannequins | Premium FRP Mannequins India</title>
+
+<meta name="description" content="Gemini Mannequins – Premium FRP Mannequins for Retail, Fashion & Exhibitions. Male, Female, Life-size & Abstract.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Poppins;background:#0e0e0e;color:#eee}
-header,footer{text-align:center;padding:20px}
-header h1{color:#c9a44c}
-.section{padding:70px 8%}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-.card{background:#171717;padding:20px;border-radius:14px}
-.card img{width:100%;border-radius:12px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px}
+:root{
+  --bg:#0c0c0c;
+  --card:#151515;
+  --gold:#c9a44c;
+  --text:#eaeaea;
+  --muted:#9a9a9a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{
+  padding:22px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+header h1{
+  font-size:1.35rem;
+  color:var(--gold);
+  font-weight:500;
+}
+nav a{
+  margin-left:26px;
+  font-size:.9rem;
+  color:var(--muted);
+}
+nav a:hover{color:var(--gold)}
+
+/* HERO */
+.hero{
+  padding:110px 8% 80px;
+  text-align:center;
+}
+.hero h2{
+  font-size:2.6rem;
+  font-weight:500;
+}
+.hero span{color:var(--gold)}
+.hero p{
+  max-width:760px;
+  margin:22px auto 0;
+  color:var(--muted);
+  font-size:1rem;
+}
+
+/* SECTION */
+.section{
+  padding:90px 8%;
+}
+.section h3{
+  text-align:center;
+  font-size:1.9rem;
+  color:var(--gold);
+  margin-bottom:60px;
+  font-weight:500;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:16px;
+  padding:36px 28px;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.35s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201,164,76,.35);
+}
+.card h4{
+  color:var(--gold);
+  font-size:1.1rem;
+  margin-bottom:14px;
+}
+.card p{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:80px 8%;
+}
+.cta a{
+  display:inline-block;
+  padding:14px 36px;
+  border:1px solid var(--gold);
+  border-radius:40px;
+  font-size:.9rem;
+}
+.cta a:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  padding:30px 8%;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
+  font-size:.8rem;
+  color:var(--muted);
+}
+.social a{margin:0 14px}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  font-size:.85rem;
+  transition:.3s;
+}
+.whatsapp:hover{transform:scale(1.12)}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Gemini Mannequins</h1>
-<p>Retail • Fashion • Exhibitions</p>
+  <h1>Gemini Manufacturing & Co.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mannequins.html">Mannequins</a>
+    <a href="planters.html">Planters</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
+<section class="hero">
+  <h2>Gemini <span>Mannequins</span></h2>
+  <p>
+    A dedicated mannequin division under Gemini Manufacturing & Co.,
+    delivering premium FRP mannequins for retail, fashion and exhibition spaces.
+  </p>
+</section>
+
 <section class="section">
-<h2>Categories</h2>
+<h3>Mannequin Categories</h3>
+
 <div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=800">
-<h4>Male Mannequins</h4>
-</div>
+  <div class="card">
+    <h4>Male Mannequins</h4>
+    <p>
+      Designed for menswear retail and fashion displays.
+      <br><br>
+      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/male/ -->
+    </p>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?w=800">
-<h4>Female Mannequins</h4>
-</div>
+  <div class="card">
+    <h4>Female Mannequins</h4>
+    <p>
+      Elegant forms for womenswear, lifestyle and premium retail.
+      <br><br>
+      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/female/ -->
+    </p>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593032457866-1e2e7b75f3c4?w=800">
-<h4>Abstract / Custom</h4>
-</div>
+  <div class="card">
+    <h4>Life-size Mannequins</h4>
+    <p>
+      Realistic proportions for flagship stores and exhibitions.
+      <br><br>
+      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/life-size/ -->
+    </p>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800">
-<h4>Life-size Displays</h4>
-</div>
+  <div class="card">
+    <h4>Abstract Mannequins</h4>
+    <p>
+      Contemporary designs for modern and conceptual displays.
+      <br><br>
+      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/abstract/ -->
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>Custom Mannequins</h4>
+    <p>
+      Bespoke poses, finishes and forms made to order.
+      <br><br>
+      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/custom/ -->
+    </p>
+  </div>
 
 </div>
 </section>
 
-<section class="section">
-<a href="catalog/mannequins.pdf" style="color:#c9a44c">
-📥 View / Download Mannequin Catalog
-</a> <!-- PLACEHOLDER PDF -->
+<section class="cta">
+  <a href="catalog/mannequins.pdf" download>
+    Download Mannequin Catalog
+  </a>
+  <!-- PLACEHOLDER: Replace mannequins.pdf with final catalog -->
 </section>
 
-<footer>© 2025 Gemini Mannequins</footer>
-<a class="whatsapp" href="https://wa.me/918904442714">💬</a>
+<footer>
+© 2025 Gemini Mannequins
+<div class="social">
+  <a href="#">Facebook</a><!-- add later -->
+  <a href="#">Instagram</a>
+  <a href="#">LinkedIn</a>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918904442714">WhatsApp</a>
 
 </body>
 </html>
