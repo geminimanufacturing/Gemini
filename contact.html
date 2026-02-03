@@ -1,14 +1,63 @@
-<!-- 5️⃣ contact.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>...similar header and SEO...</head>
-<body>...hero: Contact Us...
-<section class="section"><div class="grid"><div class="card"><h3>Pooja Manubolu</h3><p><strong>BDM & Marketing</strong></p><p>📞 <a href="tel:+918904442714">+91 89044 42714</a></p><p>✉️ <a href="mailto:pooja@geminimannequins.in">pooja@geminimannequins.in</a></p></div>
-<div class="card"><h3>Uday Kiran</h3><p><strong>Founder</strong></p><p>📞 <a href="tel:+919502066865">+91 95020 66865</a></p><p>✉️ <a href="mailto:uday@geminimannequins.in">uday@geminimannequins.in</a></p></div></div>
-<div class="states"><strong>Operational Regions:</strong> Karnataka • Telangana • Andhra Pradesh</div></section>
-<section class="cta"><a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a></section>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Gemini Manufacturing & Co.</title>
+<meta name="description" content="Contact Gemini Manufacturing & Co. for inquiries on FRP Mannequins, Planters, Sculptures, Props, and Fountains.">
+<meta name="keywords" content="Contact Gemini Manufacturing, FRP Products India, BDM, Founder">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>/* Same CSS as mannequins.html */</style>
+</head>
+<body>
+<header>
+<h1>Gemini Manufacturing & Co.</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="mannequins.html">Mannequins</a>
+<a href="planters.html">Planters</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Contact <span>Us</span></h2>
+<p>Reach out to our team for inquiries on FRP Mannequins, Planters, Sculptures, Props, and Fountains.</p>
+</section>
+
+<section class="section">
+<div class="grid">
+<div class="card">
+<h4>Pooja Manubolu</h4>
+<p><strong>BDM & Marketing</strong></p>
+<p>📞 <a href="tel:+918904442714">+91 89044 42714</a></p>
+<p>✉️ <a href="mailto:pooja@geminimannequins.in">pooja@geminimannequins.in</a></p>
+</div>
+<div class="card">
+<h4>Uday Kiran</h4>
+<p><strong>Founder</strong></p>
+<p>📞 <a href="tel:+919502066865">+91 95020 66865</a></p>
+<p>✉️ <a href="mailto:uday@geminimannequins.in">uday@geminimannequins.in</a></p>
+</div>
+</div>
+<p style="text-align:center;margin-top:20px;">Operational Regions: Karnataka • Telangana • Andhra Pradesh</p>
+</section>
+
+<section class="cta">
+<a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a>
+</section>
+
 <footer>© 2025 Gemini Manufacturing & Co. All rights reserved</footer>
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
-<script>/* scroll animations */</script>
+
+<script>
+window.addEventListener('scroll',()=>{
+document.querySelectorAll('.section, .hero').forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){el.classList.add('visible');}
+});
+});
+</script>
 </body>
 </html>
