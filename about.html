@@ -3,107 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Gemini Manufacturing & Co</title>
+<title>About Gemini Manufacturing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0b0b;
-  color: #f2f2f2;
-}
-a { text-decoration: none; color: inherit; }
-
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(0,0,0,0.85);
-  padding: 16px 42px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: 600;
-  color: #d4af37;
-}
-
-nav a {
-  margin-left: 26px;
-  font-size: 14px;
-  color: #ccc;
-}
-nav a:hover { color: #fff; }
-
-.hero {
-  padding: 90px 40px 60px;
-  text-align: center;
-}
-.hero h1 { font-size: 42px; margin-bottom: 12px; }
-.hero p { color: #bbb; max-width: 760px; margin: auto; }
-
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 40px;
-}
-.section h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 28px;
-}
-
-.card {
-  background: #141414;
-  border: 1px solid #222;
-  border-radius: 14px;
-  padding: 28px;
-  transition: 0.3s ease;
-}
-.card:hover {
-  border-color: #d4af37;
-  transform: translateY(-6px);
-}
-.card h3 { margin-top: 0; }
-
-.placeholder {
-  font-size: 12px;
-  color: #666;
-  margin-top: 12px;
-  font-style: italic;
-}
-
-footer {
-  border-top: 1px solid #222;
-  padding: 34px;
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-}
-
-.socials svg {
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-  fill: #d4af37;
-  transition: 0.3s ease;
-}
-.socials svg:hover { transform: scale(1.2); }
+/* EXACT SAME CSS AS MANNEQUINS */
+:root{--bg:#0c0c0c;--card:#151515;--gold:#c9a44c;--text:#eaeaea;--muted:#9a9a9a}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+header h1{color:var(--gold);font-size:1.35rem;font-weight:500}
+nav a{margin-left:26px;font-size:.9rem;color:var(--muted)}
+nav a:hover{color:var(--gold)}
+.hero{text-align:center;padding:110px 8% 80px}
+.hero h2{font-size:2.6rem;font-weight:500}
+.hero span{color:var(--gold)}
+.hero p{max-width:760px;margin:22px auto;color:var(--muted)}
+.section{padding:90px 8%}
+.section h3{text-align:center;color:var(--gold);font-size:1.9rem;margin-bottom:40px}
+.section p{max-width:900px;margin:auto;color:var(--muted);line-height:1.8}
+footer{text-align:center;padding:30px 8%;border-top:1px solid rgba(255,255,255,.06);font-size:.8rem;color:var(--muted)}
+.social a{margin:0 14px}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Gemini Manufacturing & Co</div>
+  <h1>Gemini Manufacturing & Co.</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="mannequins.html">Mannequins</a>
@@ -114,62 +43,29 @@ footer {
 </header>
 
 <section class="hero">
-  <h1>About Gemini Manufacturing</h1>
-  <p>FRP manufacturing specialists delivering premium products for retail, architecture and commercial spaces.</p>
+  <h2>About <span>Gemini</span></h2>
+  <p>
+    Crafting premium FRP products with precision, durability and design excellence.
+  </p>
 </section>
 
 <section class="section">
-  <h2>Our Company</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Who We Are</h3>
-      <p>
-        Gemini Manufacturing & Co is a focused FRP manufacturing company.
-        Our division Gemini Mannequins specializes in retail mannequins,
-        while our core unit produces architectural and decorative FRP products.
-      </p>
-      <div class="placeholder">📌 Add company timeline / founder note</div>
-    </div>
-
-    <div class="card">
-      <h3>Product Divisions</h3>
-      <p>
-        Mannequins, planters, fountains, sculptures, props and FRP profiles.
-        Each category is customizable in size, finish and color.
-      </p>
-      <div class="placeholder">📌 Add category catalogs</div>
-    </div>
-
-    <div class="card">
-      <h3>Manufacturing Strength</h3>
-      <p>
-        Lightweight, weather-resistant and long-lasting FRP solutions
-        crafted with attention to detail and structural integrity.
-      </p>
-      <div class="placeholder">📌 Add process or factory visuals</div>
-    </div>
-
-    <div class="card">
-      <h3>Service Regions</h3>
-      <p>
-        Karnataka<br>
-        Telangana<br>
-        Andhra Pradesh
-      </p>
-      <div class="placeholder">📌 Expansion map</div>
-    </div>
-
-  </div>
+  <h3>Who We Are</h3>
+  <p>
+    Gemini Manufacturing & Co. is a specialized FRP manufacturing company producing
+    mannequins, planters, sculptures, props, fountains and architectural profiles.
+    <br><br>
+    <!-- CONTENT PLACEHOLDER -->
+  </p>
 </section>
 
 <footer>
-  <div class="socials">
-    <a href="#"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
-    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4a4.6 4.6 0 0 1 1.7 1.1 4.6 4.6 0 0 1 1.1 1.7c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3a4.6 4.6 0 0 1-1.1 1.7 4.6 4.6 0 0 1-1.7 1.1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a4.6 4.6 0 0 1-1.7-1.1 4.6 4.6 0 0 1-1.1-1.7c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3a4.6 4.6 0 0 1 1.1-1.7 4.6 4.6 0 0 1 1.7-1.1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
-    <a href="#"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h5v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.1 3.4 6.1 7.8V24h-5v-7.6c0-1.8 0-4.2-2.6-4.2s-3 2-3 4v7.8H8z"/></svg></a>
+  <div class="social">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
   </div>
-  © 2025 Gemini Manufacturing & Co. All rights reserved
+  © 2025 Gemini Manufacturing
 </footer>
 
 </body>
