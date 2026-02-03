@@ -12,26 +12,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-.catalog-cta{
-  margin-top:40px;
-  text-align:center;
-}
-
-.catalog-cta a{
-  display:inline-block;
-  padding:14px 34px;
-  border:1px solid var(--gold);
-  border-radius:40px;
-  font-size:.9rem;
-  color:var(--gold);
-  transition:.3s ease;
-}
-
-.catalog-cta a:hover{
-  background:var(--gold);
-  color:#000;
-}
-
 :root{
   --bg:#0c0c0c;
   --card:#151515;
@@ -89,8 +69,27 @@ nav a:hover{color:var(--gold)}
   text-align:center;
   font-size:1.9rem;
   color:var(--gold);
-  margin-bottom:60px;
+  margin-bottom:30px;
   font-weight:500;
+}
+
+/* CATALOG CTA */
+.catalog-cta{
+  text-align:center;
+  margin-bottom:60px;
+}
+.catalog-cta a{
+  display:inline-block;
+  padding:14px 36px;
+  border:1px solid var(--gold);
+  border-radius:40px;
+  font-size:.9rem;
+  color:var(--gold);
+  transition:.3s ease;
+}
+.catalog-cta a:hover{
+  background:var(--gold);
+  color:#000;
 }
 
 /* GRID */
@@ -121,23 +120,6 @@ nav a:hover{color:var(--gold)}
   font-size:.9rem;
   color:var(--muted);
   line-height:1.6;
-}
-
-/* CTA */
-.cta{
-  text-align:center;
-  padding:80px 8%;
-}
-.cta a{
-  display:inline-block;
-  padding:14px 36px;
-  border:1px solid var(--gold);
-  border-radius:40px;
-  font-size:.9rem;
-}
-.cta a:hover{
-  background:var(--gold);
-  color:#000;
 }
 
 /* FOOTER */
@@ -201,81 +183,67 @@ footer{
 </section>
 
 <section class="section">
-<h3>Mannequin Categories</h3>
+  <h3>Mannequin Categories</h3>
 
+  <!-- SINGLE, CLEAN CATALOG DOWNLOAD -->
   <div class="catalog-cta">
-  <a href="assets/catalogs/gemini-mannequins-catalog.pdf" download>
-    Download Full Product Guide
-  </a>
-</div>
-
-
-<div class="grid">
-
-  <div class="card">
-    <h4>Male Mannequins</h4>
-    <p>
-      <div class="catalog-cta">
-  <a href="assets/catalogs/gemini-mannequins-catalog.pdf" target="_blank">
-    View Mannequin Catalogue (PDF)
-  </a>
-</div>
-
-      Designed for menswear retail and fashion displays.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/male/ -->
-    </p>
+    <a href="assets/catalogs/gemini-mannequins-catalog.pdf" download>
+      Download Complete Mannequin Catalogue (PDF)
+    </a>
   </div>
 
-  <div class="card">
-    <h4>Female Mannequins</h4>
-    <p>
-      Elegant forms for womenswear and premium retail.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/female/ -->
-    </p>
+  <div class="grid">
+
+    <div class="card">
+      <h4>Male Mannequins</h4>
+      <p>
+        Designed for menswear retail and fashion displays.
+        <br><br>
+        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/male/ -->
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Female Mannequins</h4>
+      <p>
+        Elegant forms for womenswear and premium retail.
+        <br><br>
+        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/female/ -->
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Life-size Mannequins</h4>
+      <p>
+        Realistic proportions for flagship stores and exhibitions.
+        <br><br>
+        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/life-size/ -->
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Abstract Mannequins</h4>
+      <p>
+        Contemporary designs for modern and conceptual displays.
+        <br><br>
+        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/abstract/ -->
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Custom Mannequins</h4>
+      <p>
+        Bespoke poses, finishes and forms made to order.
+        <br><br>
+        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/custom/ -->
+      </p>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h4>Life-size Mannequins</h4>
-    <p>
-      Realistic proportions for flagship stores.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/life-size/ -->
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Abstract Mannequins</h4>
-    <p>
-      Contemporary designs for modern displays.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/abstract/ -->
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Custom Mannequins</h4>
-    <p>
-      Bespoke poses, finishes and forms made to order.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/mannequins/custom/ -->
-    </p>
-  </div>
-
-</div>
-</section>
-
-<section class="cta">
-  <a href="catalog/mannequins.pdf" download>
-    Download Mannequin Catalog
-  </a>
-  <!-- PLACEHOLDER: Replace mannequins.pdf with final catalog -->
 </section>
 
 <footer>
   <div class="social">
-    <!-- TODO: replace # with real links -->
     <a href="#"><i class="fab fa-facebook-f"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-linkedin-in"></i></a>
