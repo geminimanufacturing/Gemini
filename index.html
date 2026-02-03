@@ -3,228 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gemini Manufacturing | FRP Products</title>
-  <meta name="description" content="Gemini Manufacturing – Premium FRP mannequins, fountains, planters, props, profiles, and sculptures." />
+
+  <title>Gemini Manufacturing & Co. | FRP Products India</title>
+  <meta name="description" content="Gemini Manufacturing & Co. – Premium FRP manufacturing in India. Mannequins, planters, sculptures, props, fountains and architectural profiles." />
+  <meta name="keywords" content="FRP Manufacturing India, FRP Mannequins, FRP Planters, FRP Sculptures, Fiberglass Products" />
+
   <style>
     :root {
-      --primary: #1f2937; /* dark slate */
-      --secondary: #0ea5e9; /* sky blue */
-      --light: #f9fafb;
-      --muted: #6b7280;
+      --black: #0b0b0b;
+      --gold: #c9a24d;
+      --gold-soft: #e6d29a;
+      --white: #ffffff;
+      --muted: #9ca3af;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
 
-    body {
-      background: var(--light);
-      color: var(--primary);
-      line-height: 1.6;
-    }
+    body { background: var(--black); color: var(--white); line-height: 1.6; }
+
+    a { text-decoration: none; color: inherit; }
 
     /* NAVBAR */
     header {
-      position: sticky;
-      top: 0;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,11,11,0.9);
+      border-bottom: 1px solid rgba(201,162,77,0.2);
+      backdrop-filter: blur(8px);
     }
 
     .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1200px; margin: auto; padding: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
     }
 
-    .brand {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+    .brand { font-size: 1.4rem; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); }
 
-    .nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-    }
+    .nav a { margin-left: 1.5rem; font-weight: 500; opacity: 0.9; }
+    .nav a:hover { color: var(--gold); }
 
     /* HERO */
     .hero {
-      background: linear-gradient(to right, #020617, #0f172a);
-      color: white;
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      text-align: center;
     }
 
-    .hero-content {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      color: #cbd5f5;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--secondary);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .hero h1 { font-size: 3.2rem; color: var(--gold-soft); margin-bottom: 1rem; }
+    .hero p { max-width: 760px; margin: auto; color: #d1d5db; font-size: 1.1rem; }
 
     /* SECTIONS */
-    section {
-      padding: 4rem 1rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
+    section { padding: 4.5rem 1rem; }
+    .container { max-width: 1200px; margin: auto; }
 
     .section-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
+      text-align: center; font-size: 2.2rem; color: var(--gold-soft);
+      margin-bottom: 2.5rem;
     }
 
-    /* PRODUCTS */
-    .grid {
+    /* PRODUCT CATEGORIES */
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
     }
 
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.3s ease;
+    .category-card {
+      background: linear-gradient(180deg, #111, #050505);
+      border: 1px solid rgba(201,162,77,0.18);
+      border-radius: 1.6rem;
+      overflow: hidden;
+      transition: all 0.4s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 45px rgba(201,162,77,0.15);
     }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
+    .category-img {
+      height: 240px;
+      background: #1a1a1a;
+      display: flex; align-items: center; justify-content: center;
+      color: #666; font-size: 0.95rem;
     }
 
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+    .category-info { padding: 1.8rem; }
 
-    /* ABOUT */
-    .about {
-      background: #f1f5f9;
-    }
+    .category-info h3 { color: var(--gold); margin-bottom: 0.5rem; }
+    .category-info p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+
+    .explore { color: var(--gold-soft); font-weight: 600; }
 
     /* FOOTER */
     footer {
-      background: #020617;
-      color: #cbd5f5;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
+      border-top: 1px solid rgba(201,162,77,0.2);
+      padding: 2.5rem 1rem; text-align: center;
+      color: #9ca3af; font-size: 0.9rem;
+    }
+
+    .socials { margin: 1.5rem 0; display: flex; justify-content: center; gap: 1.5rem; }
+    .socials a:hover { color: var(--gold); }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; color: white;
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; z-index: 999;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     @media (max-width: 768px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
+      .hero h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="brand">GEMINI MANUFACTURING</div>
-      <nav>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav">
+    <div class="brand">GEMINI MANUFACTURING & CO.</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mannequins.html">Mannequins</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div>
-        <h1>Premium FRP Mannequins & Sculptural Products</h1>
-        <p>Designing durable, lightweight, and custom FRP solutions for retail, architecture, and public spaces.</p>
-        <a class="btn" href="#contact">Get in Touch</a>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Premium FRP Manufacturing</h1>
+  <p>Gemini Manufacturing & Co. designs and manufactures high-quality Fiber Reinforced Plastic (FRP) products for retail, architecture, exhibitions and public spaces across India.</p>
+</section>
 
-  <section id="products">
-    <div class="container">
-      <h2 class="section-title">Our FRP Product Range</h2>
-      <div class="grid">
-        <div class="card"><h3>Mannequins</h3><p>Retail, fashion, and custom display mannequins.</p></div>
-        <div class="card"><h3>Water Fountains</h3><p>Indoor & outdoor decorative FRP fountains.</p></div>
-        <div class="card"><h3>Planters & Pots</h3><p>Weather-resistant modern FRP planters.</p></div>
-        <div class="card"><h3>Props</h3><p>Theme-based and commercial props.</p></div>
-        <div class="card"><h3>Profiles</h3><p>Architectural FRP profiles & elements.</p></div>
-        <div class="card"><h3>Sculptures</h3><p>Custom-designed FRP sculptures.</p></div>
-      </div>
-    </div>
-  </section>
+<section>
+  <div class="container">
+    <h2 class="section-title">Our FRP Product Categories</h2>
+    <div class="category-grid">
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Gemini Manufacturing</h2>
-      <p style="max-width: 800px; margin: auto; text-align: center; color: #374151;">
-        Gemini Manufacturing specializes in Fiber Reinforced Plastic (FRP) products that combine strength,
-        aesthetics, and long-term durability. From mannequins to architectural installations, we create
-        custom-built solutions tailored to your vision.
-      </p>
-    </div>
-  </section>
+      <a href="mannequins.html" class="category-card">
+        <div class="category-img">Mannequin Image</div>
+        <div class="category-info">
+          <h3>Gemini Mannequins</h3>
+          <p>Custom, ready-made, life-size and abstract FRP mannequins.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p style="text-align:center; color: var(--muted);">
-        📞 Phone / WhatsApp: +91-XXXXXXXXXX<br />
-        📧 Email: info@geminimanufacturing.com
-      </p>
-    </div>
-  </section>
+      <a href="planters.html" class="category-card">
+        <div class="category-img">Planter Image</div>
+        <div class="category-info">
+          <h3>Planters & Pots</h3>
+          <p>Durable and aesthetic FRP planters for indoor & outdoor use.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
 
-  <footer>
-    © 2026 Gemini Manufacturing. All rights reserved.
-  </footer>
+      <a href="sculptures.html" class="category-card">
+        <div class="category-img">Sculpture Image</div>
+        <div class="category-info">
+          <h3>Sculptures</h3>
+          <p>Custom-designed FRP sculptures for public and private spaces.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
+
+      <a href="props.html" class="category-card">
+        <div class="category-img">Props Image</div>
+        <div class="category-info">
+          <h3>Props</h3>
+          <p>FRP props for events, exhibitions and themed environments.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
+
+      <a href="fountains.html" class="category-card">
+        <div class="category-img">Fountain Image</div>
+        <div class="category-info">
+          <h3>Water Fountains</h3>
+          <p>Decorative FRP fountains for landscapes and interiors.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
+
+      <a href="profiles.html" class="category-card">
+        <div class="category-img">Profile Image</div>
+        <div class="category-info">
+          <h3>Architectural Profiles</h3>
+          <p>FRP profiles and design elements for architecture.</p>
+          <span class="explore">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="socials">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+  </div>
+  © 2025 Gemini Manufacturing & Co. All rights reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">🟢</a>
 
 </body>
 </html>
