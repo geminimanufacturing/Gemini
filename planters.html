@@ -3,184 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>FRP Planters | Gemini Manufacturing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-:root{
-  --bg:#0c0c0c;
-  --card:#151515;
-  --gold:#c9a44c;
-  --text:#eaeaea;
-  --muted:#9a9a9a;
-}
+/* IDENTICAL CSS — DO NOT CHANGE */
+:root{--bg:#0c0c0c;--card:#151515;--gold:#c9a44c;--text:#eaeaea;--muted:#9a9a9a}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
 body{background:var(--bg);color:var(--text)}
 a{text-decoration:none;color:inherit}
-
-/* HEADER */
-header{
-  padding:22px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-header h1{font-size:1.35rem;color:var(--gold);font-weight:500}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+header h1{color:var(--gold)}
 nav a{margin-left:26px;font-size:.9rem;color:var(--muted)}
 nav a:hover{color:var(--gold)}
-
-/* HERO */
-.hero{
-  padding:110px 8% 80px;
-  text-align:center;
-}
+.hero{text-align:center;padding:110px 8% 80px}
 .hero h2{font-size:2.6rem;font-weight:500}
 .hero span{color:var(--gold)}
-.hero p{
-  max-width:760px;
-  margin:22px auto 0;
-  color:var(--muted);
-}
-
-/* SECTION */
 .section{padding:90px 8%}
-.section h3{
-  text-align:center;
-  font-size:1.9rem;
-  color:var(--gold);
-  margin-bottom:60px;
-  font-weight:500;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:32px;
-}
-
-/* CARD */
-.card{
-  background:var(--card);
-  border-radius:16px;
-  padding:36px 28px;
-  border:1px solid rgba(255,255,255,.05);
-  transition:.35s ease;
-}
-.card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(201,164,76,.35);
-}
-.card h4{color:var(--gold);margin-bottom:14px;font-size:1.1rem}
-.card p{font-size:.9rem;color:var(--muted);line-height:1.6}
-
-/* CTA */
-.cta{text-align:center;padding:80px 8%}
-.cta a{
-  display:inline-block;
-  padding:14px 36px;
-  border:1px solid var(--gold);
-  border-radius:40px;
-  font-size:.9rem;
-}
-.cta a:hover{background:var(--gold);color:#000}
-
-/* FOOTER */
-footer{
-  padding:30px 8%;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,.06);
-  font-size:.8rem;
-  color:var(--muted);
-}
-.social a{margin:0 14px}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 18px;
-  border-radius:50px;
-}
+.section h3{text-align:center;color:var(--gold);margin-bottom:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.card{background:var(--card);padding:36px;border-radius:16px;border:1px solid rgba(255,255,255,.05)}
+.card h4{color:var(--gold)}
+footer{text-align:center;padding:30px;border-top:1px solid rgba(255,255,255,.06);font-size:.8rem;color:var(--muted)}
+.social a{margin:0 14px;color:var(--gold)}
+.whatsapp{position:fixed;right:22px;bottom:22px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Gemini Manufacturing & Co.</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="mannequins.html">Mannequins</a>
-    <a href="planters.html">Planters</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<h1>Gemini Manufacturing & Co.</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="mannequins.html">Mannequins</a>
+<a href="planters.html">Planters</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h2>FRP <span>Planters</span></h2>
-  <p>
-    Durable, lightweight and elegant FRP planters for indoor,
-    outdoor, balcony and landscape applications.
-  </p>
+<h2>FRP <span>Planters</span></h2>
 </section>
 
 <section class="section">
 <h3>Planter Categories</h3>
-
 <div class="grid">
-
-  <div class="card">
-    <h4>Indoor Planters</h4>
-    <p>
-      Modern designs suitable for homes, offices and interiors.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/planters/indoor/ -->
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Outdoor Planters</h4>
-    <p>
-      Weather-resistant planters for gardens and open spaces.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER: assets/images/planters/outdoor/ -->
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Balcony & Terrace</h4>
-    <p>
-      Space-efficient planters designed for urban living.
-      <br><br>
-      <!-- IMAGE PLACEHOLDER -->
-    </p>
-  </div>
-
+<div class="card"><h4>Indoor Planters</h4><!-- images later --></div>
+<div class="card"><h4>Outdoor Planters</h4></div>
+<div class="card"><h4>Balcony Planters</h4></div>
+<div class="card"><h4>Terrace Planters</h4></div>
 </div>
 </section>
 
-<section class="cta">
-  <a href="catalog/planters.pdf" download>Download Planter Catalog</a>
-</section>
-
 <footer>
-  <div class="social">
-    <a href="#">Facebook</a>
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-  </div>
-  © 2025 Gemini Manufacturing
+<div class="social">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+© 2025 Gemini Manufacturing & Co.
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918904442714">WhatsApp</a>
-
 </body>
 </html>
