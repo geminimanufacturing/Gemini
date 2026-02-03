@@ -3,60 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gemini Manufacturing & Co | Premium FRP Products</title>
-<meta name="description" content="Gemini Manufacturing & Co – FRP Mannequins, Planters, Sculptures, Props, Fountains & Profiles in India">
+<title>Gemini Manufacturing & Co | FRP Specialists</title>
+
+<meta name="description" content="Gemini Manufacturing & Co – Premium FRP Mannequins, Planters, Sculptures, Props, Fountains & Profiles in India">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#0e0e0e;--gold:#c9a44c;--card:#171717;--text:#eee}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Poppins}
-body{background:var(--bg);color:var(--text)}
+:root{
+  --bg:#0c0c0c;
+  --card:#151515;
+  --gold:#c9a44c;
+  --text:#eaeaea;
+  --muted:#9a9a9a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
 a{text-decoration:none;color:inherit}
 
-header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center}
-header h1{color:var(--gold);font-size:1.4rem}
-nav a{margin-left:22px;font-size:.9rem;opacity:.85}
+/* ---------- HEADER ---------- */
+header{
+  padding:22px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+header h1{
+  font-size:1.35rem;
+  color:var(--gold);
+  font-weight:500;
+}
+
+nav a{
+  margin-left:26px;
+  font-size:.9rem;
+  color:var(--muted);
+}
+
 nav a:hover{color:var(--gold)}
 
-.hero{text-align:center;padding:120px 8% 80px}
-.hero h2{font-size:2.6rem}
+/* ---------- HERO ---------- */
+.hero{
+  padding:120px 8% 90px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:2.7rem;
+  font-weight:500;
+}
+
 .hero span{color:var(--gold)}
-.hero p{max-width:780px;margin:18px auto;opacity:.85}
 
-.section{padding:80px 8%}
-.section h3{text-align:center;color:var(--gold);margin-bottom:50px;font-size:1.8rem}
+.hero p{
+  max-width:760px;
+  margin:22px auto 0;
+  color:var(--muted);
+  font-size:1rem;
+}
 
+/* ---------- SECTIONS ---------- */
+.section{
+  padding:90px 8%;
+}
+
+.section h3{
+  text-align:center;
+  font-size:1.9rem;
+  color:var(--gold);
+  margin-bottom:60px;
+  font-weight:500;
+}
+
+/* ---------- GRID ---------- */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-justify-items:center;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
 }
 
+/* ---------- CARD ---------- */
 .card{
-background:var(--card);
-border-radius:14px;
-padding:20px;
-max-width:340px;
-transition:.4s;
+  background:var(--card);
+  border-radius:16px;
+  padding:36px 28px;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.35s ease;
 }
-.card:hover{transform:translateY(-8px)}
-.card img{width:100%;border-radius:12px;margin-bottom:14px}
-.card h4{color:var(--gold);margin-bottom:8px}
 
-.cta{text-align:center;padding:70px}
-.cta a{border:1px solid var(--gold);padding:14px 36px;border-radius:30px}
-.cta a:hover{background:var(--gold);color:#000}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201,164,76,.35);
+}
 
-footer{text-align:center;padding:30px;opacity:.6}
-.social a{margin:0 12px}
+.card h4{
+  color:var(--gold);
+  font-size:1.1rem;
+  margin-bottom:14px;
+}
 
+.card p{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.card a{
+  display:inline-block;
+  margin-top:16px;
+  font-size:.85rem;
+  color:var(--gold);
+}
+
+/* ---------- CTA ---------- */
+.cta{
+  text-align:center;
+  padding:80px 8%;
+}
+
+.cta a{
+  display:inline-block;
+  padding:14px 36px;
+  border:1px solid var(--gold);
+  border-radius:40px;
+  font-size:.9rem;
+}
+
+.cta a:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  padding:30px 8%;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
+  font-size:.8rem;
+  color:var(--muted);
+}
+
+.social a{
+  margin:0 14px;
+}
+
+/* ---------- WHATSAPP ---------- */
 .whatsapp{
-position:fixed;right:20px;bottom:20px;
-background:#25D366;color:#fff;
-padding:14px 18px;border-radius:50px;
-transition:.3s
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  font-size:.85rem;
+  transition:.3s;
 }
+
 .whatsapp:hover{transform:scale(1.12)}
 </style>
 </head>
@@ -64,19 +175,24 @@ transition:.3s
 <body>
 
 <header>
-<h1>Gemini Manufacturing & Co.</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="mannequins.html">Mannequins</a>
-<a href="planters.html">Planters</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <h1>Gemini Manufacturing & Co.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mannequins.html">Mannequins</a>
+    <a href="planters.html">Planters</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h2>Premium <span>FRP Products</span></h2>
-<p>Parent company of <b>Gemini Mannequins</b>, manufacturing high-quality FRP Mannequins, Planters, Sculptures, Props, Fountains and Architectural Profiles.</p>
+  <h2>FRP Crafted with <span>Precision</span></h2>
+  <p>
+    Gemini Manufacturing & Co. is a premium FRP manufacturing company.
+    <br><br>
+    <b>Gemini Mannequins</b> is our dedicated mannequin division,
+    alongside planters, sculptures, props, fountains and architectural profiles.
+  </p>
 </section>
 
 <section class="section">
@@ -84,61 +200,59 @@ transition:.3s
 
 <div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1599663789519-4c609f0922dc?w=800">
-<h4>Mannequins</h4>
-<p>Retail • Fashion • Male • Female</p>
-<a href="mannequins.html" style="color:var(--gold)">View →</a>
-</div>
+  <div class="card">
+    <h4>Gemini Mannequins</h4>
+    <p>Retail • Fashion • Male • Female • Life-size • Abstract</p>
+    <a href="mannequins.html">Explore →</a>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=800">
-<h4>Planters</h4>
-<p>Indoor • Outdoor • Balcony • Terrace</p>
-<a href="planters.html" style="color:var(--gold)">View →</a>
-</div>
+  <div class="card">
+    <h4>FRP Planters</h4>
+    <p>Indoor • Outdoor • Balcony • Terrace • Custom Shapes</p>
+    <a href="planters.html">Explore →</a>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1611095973516-9d6c234b0df1?w=800">
-<h4>Sculptures</h4>
-<p>Decorative & Custom FRP Art</p>
-</div>
+  <div class="card">
+    <h4>FRP Sculptures</h4>
+    <p>Decorative • Artistic • Custom Installations</p>
+    <a href="#">Explore →</a>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1621353728334-cb6e2f5bca14?w=800">
-<h4>Props</h4>
-<p>Events & Commercial Displays</p>
-</div>
+  <div class="card">
+    <h4>FRP Props</h4>
+    <p>Events • Retail Displays • Commercial Props</p>
+    <a href="#">Explore →</a>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1607083205923-8e2b8d20220b?w=800">
-<h4>Fountains</h4>
-<p>Garden & Interior Fountains</p>
-</div>
+  <div class="card">
+    <h4>FRP Fountains</h4>
+    <p>Garden • Landscape • Interior Water Features</p>
+    <a href="#">Explore →</a>
+  </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581092795360-bf5f9deee51e?w=800">
-<h4>Profiles</h4>
-<p>Architectural FRP Profiles</p>
-</div>
+  <div class="card">
+    <h4>Architectural Profiles</h4>
+    <p>Columns • Mouldings • Custom FRP Profiles</p>
+    <a href="#">Explore →</a>
+  </div>
 
 </div>
 </section>
 
 <section class="cta">
-<a href="https://wa.me/918904442714" target="_blank">WhatsApp Enquiry</a>
+  <a href="https://wa.me/918904442714" target="_blank">WhatsApp Enquiry</a>
 </section>
 
 <footer>
 © 2025 Gemini Manufacturing & Co. All rights reserved
 <div class="social">
-<a href="#">FB</a><!-- PLACEHOLDER -->
-<a href="#">IG</a><!-- PLACEHOLDER -->
-<a href="#">LI</a><!-- PLACEHOLDER -->
+  <a href="#">Facebook</a><!-- add link later -->
+  <a href="#">Instagram</a>
+  <a href="#">LinkedIn</a>
 </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918904442714">💬</a>
+<a class="whatsapp" href="https://wa.me/918904442714">WhatsApp</a>
 
 </body>
 </html>
