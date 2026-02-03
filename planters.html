@@ -1,179 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FRP Planters & Pots | Gemini Manufacturing & Co</title>
-  <meta name="description" content="Indoor, outdoor, balcony and landscape FRP planters manufactured by Gemini Manufacturing & Co." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRP Planters | Gemini Manufacturing & Co</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f5f5f5;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0b0b;
+  color: #f2f2f2;
+}
+a { text-decoration: none; color: inherit; }
 
-    a { text-decoration: none; color: inherit; }
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  padding: 16px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
 
-    /* ===== NAVBAR ===== */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.85);
-      padding: 14px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      border-bottom: 1px solid #222;
-    }
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d4af37;
+}
 
-    header .logo {
-      font-size: 20px;
-      font-weight: 600;
-      color: #d4af37; /* GOLD */
-    }
+nav a {
+  margin-left: 26px;
+  font-size: 14px;
+  color: #ccc;
+}
+nav a:hover { color: #fff; }
 
-    header nav a {
-      margin-left: 24px;
-      color: #ccc;
-      font-size: 14px;
-    }
+.hero {
+  padding: 90px 40px 60px;
+  text-align: center;
+}
+.hero h1 { font-size: 42px; margin-bottom: 12px; }
+.hero p { color: #bbb; max-width: 720px; margin: auto; }
 
-    header nav a:hover {
-      color: #fff;
-    }
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 40px;
+}
+.section h2 { font-size: 30px; margin-bottom: 30px; }
 
-    /* ===== HERO ===== */
-    .hero {
-      padding: 90px 40px 70px;
-      text-align: center;
-      background: linear-gradient(to bottom, #111, #0e0e0e);
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 28px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
+.card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 28px;
+  transition: 0.3s ease;
+}
+.card:hover {
+  border-color: #d4af37;
+  transform: translateY(-6px);
+}
+.card h3 { margin-top: 0; }
 
-    .hero p {
-      font-size: 17px;
-      color: #bbb;
-      max-width: 700px;
-      margin: auto;
-    }
+.placeholder {
+  font-size: 12px;
+  color: #666;
+  margin-top: 12px;
+  font-style: italic;
+}
 
-    /* ===== SECTION ===== */
-    .section {
-      padding: 70px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
+footer {
+  border-top: 1px solid #222;
+  padding: 34px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
 
-    .section h2 {
-      font-size: 30px;
-      margin-bottom: 40px;
-      text-align: center;
-    }
+.socials svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  fill: #d4af37;
+  transition: 0.3s ease;
+}
+.socials svg:hover { transform: scale(1.2); }
 
-    /* ===== GRID ===== */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-    }
-
-    .card {
-      background: #151515;
-      padding: 28px;
-      border-radius: 14px;
-      border: 1px solid #222;
-      transition: transform 0.3s ease, border 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #d4af37;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: #fff;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #aaa;
-      line-height: 1.6;
-    }
-
-    /* PLACEHOLDER NOTE */
-    .placeholder {
-      font-size: 12px;
-      color: #666;
-      margin-top: 12px;
-      font-style: italic;
-    }
-
-    /* ===== CTA ===== */
-    .cta {
-      text-align: center;
-      padding: 60px 40px;
-      background: #111;
-    }
-
-    .cta a {
-      background: #d4af37;
-      color: #000;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 30px 40px;
-      text-align: center;
-      border-top: 1px solid #222;
-      color: #777;
-      font-size: 13px;
-    }
-
-    .socials {
-      margin-bottom: 12px;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      font-size: 18px;
-      color: #aaa;
-    }
-
-    .socials a:hover {
-      color: #d4af37;
-    }
-
-    /* ===== WHATSAPP ===== */
-    .whatsapp {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #25d366;
-      color: #000;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
-  </style>
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.whatsapp:hover { transform: scale(1.1); }
+</style>
 </head>
 
 <body>
@@ -191,64 +123,48 @@
 
 <section class="hero">
   <h1>FRP Planters & Pots</h1>
-  <p>Durable, lightweight and customizable FRP planters for residential, commercial and landscape applications.</p>
+  <p>Durable, lightweight and customizable FRP planters for residential and commercial spaces.</p>
 </section>
 
 <section class="section">
-  <h2>Planter Categories</h2>
-
+  <h2>Categories</h2>
   <div class="grid">
 
     <div class="card">
       <h3>Indoor Planters</h3>
-      <p>Elegant FRP planters designed for homes, offices, malls and commercial interiors.</p>
-      <div class="placeholder">📌 Image gallery placeholder</div>
+      <p>Homes, offices, malls and interior spaces.</p>
+      <div class="placeholder">📌 Add indoor planter catalog & images</div>
     </div>
 
     <div class="card">
       <h3>Outdoor Planters</h3>
-      <p>Weather-resistant FRP planters suitable for gardens, entrances and public spaces.</p>
-      <div class="placeholder">📌 Image gallery placeholder</div>
+      <p>Gardens, landscapes and public areas.</p>
+      <div class="placeholder">📌 Outdoor product range</div>
     </div>
 
     <div class="card">
-      <h3>Balcony Planters</h3>
-      <p>Compact and stylish planters designed for apartments and balconies.</p>
-      <div class="placeholder">📌 Image gallery placeholder</div>
+      <h3>Balcony & Terrace</h3>
+      <p>Weather-resistant FRP designs.</p>
+      <div class="placeholder">📌 Balcony planters</div>
     </div>
 
     <div class="card">
-      <h3>Terrace Planters</h3>
-      <p>Lightweight planters ideal for terrace gardens and rooftop landscaping.</p>
-      <div class="placeholder">📌 Image gallery placeholder</div>
-    </div>
-
-    <div class="card">
-      <h3>Landscape Planters</h3>
-      <p>Large-format FRP planters for commercial landscaping and architectural projects.</p>
-      <div class="placeholder">📌 Image gallery placeholder</div>
-    </div>
-
-    <div class="card">
-      <h3>Custom Planters</h3>
-      <p>Custom shapes, sizes, colors and finishes as per architect or client requirement.</p>
-      <div class="placeholder">📌 Future catalog download link</div>
+      <h3>Architectural Planters</h3>
+      <p>Large-format custom planters.</p>
+      <div class="placeholder">📌 Custom molds</div>
     </div>
 
   </div>
-</section>
-
-<section class="cta">
-  <a href="https://wa.me/918904442714" target="_blank">Enquire on WhatsApp</a>
 </section>
 
 <footer>
   <div class="socials">
-    <a href="#">🔗</a>
-    <a href="#">📷</a>
-    <a href="#">💼</a>
+    <!-- TODO: Replace # with real links -->
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4a4.6 4.6 0 0 1 1.7 1.1 4.6 4.6 0 0 1 1.1 1.7c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3a4.6 4.6 0 0 1-1.1 1.7 4.6 4.6 0 0 1-1.7 1.1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a4.6 4.6 0 0 1-1.7-1.1 4.6 4.6 0 0 1-1.1-1.7c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3a4.6 4.6 0 0 1 1.1-1.7 4.6 4.6 0 0 1 1.7-1.1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h5v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.1 3.4 6.1 7.8V24h-5v-7.6c0-1.8 0-4.2-2.6-4.2s-3 2-3 4v7.8H8z"/></svg></a>
   </div>
-  © 2025 Gemini Manufacturing & Co. All rights reserved.
+  © 2025 Gemini Manufacturing & Co. All rights reserved
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
