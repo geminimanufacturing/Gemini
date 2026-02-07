@@ -40,9 +40,65 @@ nav a{
 }
 nav a:hover{color:var(--gold)}
 
+/* 🔥 NEW AUTO-SLIDING IMAGE BANNER */
+.slider-banner{
+  position:relative;
+  height:450px;
+  overflow:hidden;
+}
+.slider-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation: autoSlide 12s infinite;
+}
+.slide:nth-child(1){background-image:url("https://i.ibb.co/G4Jq6tqg/your-mannequin.jpg");}
+.slide:nth-child(2){animation-delay:2s;background-image:url("https://i.ibb.co/1GzxnKNm/your-planters.jpg");}
+.slide:nth-child(3){animation-delay:4s;background-image:url("https://i.ibb.co/zWmv9ZD2/your-sculptures.jpg");}
+.slide:nth-child(4){animation-delay:6s;background-image:url("https://i.ibb.co/7xcH94Z2/your-props.jpg");}
+.slide:nth-child(5){animation-delay:8s;background-image:url("https://i.ibb.co/W4LRV6PR/your-fountains.jpg");}
+.slide:nth-child(6){animation-delay:10s;background-image:url("https://i.ibb.co/j95pZj04/your-profiles.jpg");}
+@keyframes autoSlide{
+  0%,16.5%{opacity:1;}
+  20%,33.5%{opacity:0;}
+  36.5%,50%{opacity:1;}
+  53.5%,67%{opacity:0;}
+  70%,83.5%{opacity:1;}
+  87%,100%{opacity:0;}
+}
+.slider-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:var(--text);
+  z-index:5;
+}
+.slider-text h3{
+  font-size:2.8rem;
+  color:var(--gold);
+  margin-bottom:20px;
+  font-weight:500;
+}
+.slider-text p{
+  font-size:1.1rem;
+  max-width:600px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
 /* HERO */
 .hero{
-  padding:120px 8% 90px;
+  padding:60px 8% 90px;
   text-align:center;
 }
 .hero h2{
@@ -128,9 +184,9 @@ nav a:hover{color:var(--gold)}
   z-index:2;
 }
 
-/* ✅ FIXED WORKING IMAGES - ALL EXTERNAL URLS */
+/* YOUR WORKING HOVER IMAGES */
 .card-mannequins::before{background-image:url("https://i.ibb.co/G4Jq6tqg/your-mannequin.jpg")}
-.card-planters::before{background-image:url("https://i.ibb.co/1GzxnKNm/your-palnters.jpg")}
+.card-planters::before{background-image:url("https://i.ibb.co/1GzxnKNm/your-planters.jpg")}
 .card-sculptures::before{background-image:url("https://i.ibb.co/zWmv9ZD2/your-sculptures.jpg")}
 .card-props::before{background-image:url("https://i.ibb.co/7xcH94Z2/your-props.jpg")}
 .card-fountains::before{background-image:url("https://i.ibb.co/W4LRV6PR/your-fountains.jpg")}
@@ -187,6 +243,23 @@ footer{
   </nav>
 </header>
 
+<!-- 🔥 AUTO-CHANGING IMAGE SLIDER (2s per image) -->
+<section class="slider-banner">
+  <div class="slider-inner">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <div class="slider-text">
+    <h3>Premium FRP Collections</h3>
+    <p>Crafted with precision engineering for retail, architecture and design excellence</p>
+  </div>
+</section>
+
+<!-- Original hero section stays below slider -->
 <section class="hero">
   <h2>Premium <span>FRP Manufacturing</span></h2>
   <p>
@@ -200,37 +273,30 @@ footer{
   <h3>Our FRP Product Divisions</h3>
 
   <div class="home-grid">
-
     <a href="mannequins.html" class="home-card card-mannequins">
       <h4>FRP Mannequins</h4>
       <p>Retail • Fashion • Display Solutions</p>
     </a>
-
     <a href="planters.html" class="home-card card-planters">
       <h4>FRP Planters</h4>
       <p>Indoor • Outdoor • Balcony • Terrace</p>
     </a>
-
     <a href="sculptures.html" class="home-card card-sculptures">
       <h4>FRP Sculptures</h4>
       <p>Decorative • Artistic • Custom Installations</p>
     </a>
-
     <a href="props.html" class="home-card card-props">
       <h4>FRP Props</h4>
       <p>Events • Retail Displays • Commercial Props</p>
     </a>
-
     <a href="fountains.html" class="home-card card-fountains">
       <h4>FRP Fountains</h4>
       <p>Garden • Landscape • Interior Water Features</p>
     </a>
-
     <a href="profiles.html" class="home-card card-profiles">
       <h4>Architectural Profiles</h4>
       <p>Columns • Mouldings • Custom FRP Profiles</p>
     </a>
-
   </div>
 </section>
 
@@ -243,9 +309,7 @@ footer{
   © 2026 Gemini Manufacturing & Co.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
 
 </body>
 </html>
