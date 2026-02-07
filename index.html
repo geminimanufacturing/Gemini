@@ -57,8 +57,18 @@ nav a:hover{color:var(--gold)}
   height:100%;
   background-size:cover;
   background-position:center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
   opacity:0;
   animation: autoSlide 12s infinite;
+}
+.slider-banner{
+  position:relative;
+  height:500px;  /* Increased for sharpness */
+  overflow:hidden;
+
 }
 .slide:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
 .slide:nth-child(2){animation-delay:2s;background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
