@@ -26,163 +26,201 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  background:rgba(12,12,12,0.95);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 header h1{
-  font-size:1.35rem;
+  font-size:1.4rem;
   color:var(--gold);
   font-weight:500;
+  letter-spacing:0.5px;
 }
 nav a{
-  margin-left:26px;
-  font-size:.9rem;
+  margin-left:28px;
+  font-size:0.92rem;
   color:var(--muted);
+  font-weight:400;
+  position:relative;
 }
 nav a:hover{color:var(--gold)}
+nav a:hover::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:var(--gold);
+}
 
-/* 🔥 FIXED SHARP AUTO-SLIDING IMAGE BANNER */
-.slider-banner{
+/* 🔥 SCROLLING IMAGE MARQUEE - Portrait mode, right-to-left */
+.marquee-section{
+  padding:20px 8%;
+  background:linear-gradient(135deg, rgba(201,164,76,0.05), rgba(12,12,12,0.8));
+  border-bottom:1px solid rgba(255,255,255,.04);
+  overflow:hidden;
   position:relative;
-  height:500px;
+}
+.marquee-title{
+  text-align:center;
+  font-size:1.3rem;
+  color:var(--gold);
+  margin-bottom:25px;
+  font-weight:500;
+  letter-spacing:1px;
+}
+.marquee-container{
+  position:relative;
+  height:200px;  /* Portrait height */
   overflow:hidden;
 }
-.slider-inner{
-  position:relative;
-  width:100%;
+.marquee-track{
+  display:flex;
   height:100%;
+  animation: scrollLeft 25s linear infinite;
 }
-.slide{
-  position:absolute;
-  width:100%;
+.marquee-track:hover{
+  animation-play-state:paused;  /* Pause on hover */
+}
+.marquee-image{
+  flex:0 0 300px;  /* Fixed width portrait images */
   height:100%;
-  background-repeat:no-repeat;
+  margin-right:25px;
+  background-size:cover;
   background-position:center;
-  background-size:100% 100% !important;  /* ✅ CRYSTAL CLEAR */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  opacity:0;
-  animation: autoSlide 12s infinite;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.1);
+  transition:transform 0.3s ease;
 }
-.slide:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
-.slide:nth-child(2){animation-delay:2s;background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
-.slide:nth-child(3){animation-delay:4s;background-image:url("https://i.ibb.co/Xkv1BT65/your-sculptures.jpg");}
-.slide:nth-child(4){animation-delay:6s;background-image:url("https://i.ibb.co/SwhsQ7FD/your-props.jpg");}
-.slide:nth-child(5){animation-delay:8s;background-image:url("https://i.ibb.co/rGkK4Rvq/your-fountains.jpg");}
-.slide:nth-child(6){animation-delay:10s;background-image:url("https://i.ibb.co/ZzxTHM2K/your-profiles.jpg");}
-@keyframes autoSlide{
-  0%,16.5%{opacity:1;}
-  20%,33.5%{opacity:0;}
-  36.5%,50%{opacity:1;}
-  53.5%,67%{opacity:0;}
-  70%,83.5%{opacity:1;}
-  87%,100%{opacity:0;}
+.marquee-image:hover{
+  transform:scale(1.05);
+  border-color:var(--gold);
 }
-.slider-text{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  color:var(--text);
-  z-index:10;
-}
-.slider-text h3{
-  font-size:2.8rem;
-  color:var(--gold);
-  margin-bottom:20px;
-  font-weight:500;
-}
-.slider-text p{
-  font-size:1.1rem;
-  max-width:600px;
-  color:var(--muted);
-  line-height:1.6;
+.marquee-image:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
+.marquee-image:nth-child(2){background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
+.marquee-image:nth-child(3){background-image:url("https://i.ibb.co/Xkv1BT65/your-sculptures.jpg");}
+.marquee-image:nth-child(4){background-image:url("https://i.ibb.co/SwhsQ7FD/your-props.jpg");}
+.marquee-image:nth-child(5){background-image:url("https://i.ibb.co/rGkK4Rvq/your-fountains.jpg");}
+.marquee-image:nth-child(6){background-image:url("https://i.ibb.co/ZzxTHM2K/your-profiles.jpg");}
+@keyframes scrollLeft{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-100%);}
 }
 
 /* HERO */
 .hero{
-  padding:60px 8% 90px;
+  padding:80px 8% 100px;
   text-align:center;
+  position:relative;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:100px;
+  height:3px;
+  background:var(--gold);
+  border-radius:2px;
 }
 .hero h2{
-  font-size:2.7rem;
+  font-size:2.9rem;
   font-weight:500;
+  margin-bottom:24px;
+  letter-spacing:-0.5px;
 }
 .hero span{color:var(--gold)}
 .hero p{
-  max-width:820px;
-  margin:24px auto 0;
+  max-width:780px;
+  margin:0 auto;
   color:var(--muted);
-  font-size:1rem;
+  font-size:1.02rem;
+  line-height:1.7;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{
-  padding:90px 8%;
+  padding:100px 8%;
+  position:relative;
 }
 .section h3{
   text-align:center;
-  font-size:1.9rem;
+  font-size:2rem;
   color:var(--gold);
-  margin-bottom:60px;
+  margin-bottom:70px;
   font-weight:500;
+  letter-spacing:0.3px;
+  position:relative;
+}
+.section h3::after{
+  content:"";
+  position:absolute;
+  bottom:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:2px;
+  background:linear-gradient(90deg, var(--gold), transparent);
 }
 
 /* HOME GRID */
 .home-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:32px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
 }
 
-/* HOME CARD */
+/* HOME CARDS */
 .home-card{
   position:relative;
   background:var(--card);
-  padding:60px 36px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.05);
+  padding:65px 40px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.06);
   overflow:hidden;
-  transition:.4s ease;
+  transition:all .45s cubic-bezier(0.25,0.46,0.45,0.94);
+  backdrop-filter:blur(10px);
+}
+.home-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  border-color:rgba(201,164,76,.4);
+  box-shadow:0 25px 50px rgba(201,164,76,0.15);
 }
 .home-card h4{
   color:var(--gold);
-  font-size:1.15rem;
-  margin-bottom:10px;
+  font-size:1.2rem;
+  margin-bottom:14px;
+  font-weight:500;
+  letter-spacing:0.3px;
 }
 .home-card p{
   color:var(--muted);
-  font-size:.9rem;
-  line-height:1.6;
+  font-size:0.95rem;
+  line-height:1.7;
 }
-/* Hover background layer */
+/* Hover background */
 .home-card::before{
   content:"";
   position:absolute;
   inset:0;
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
   opacity:0;
-  transform:scale(1.06);
-  transition:.55s ease;
+  transform:scale(1.08);
+  transition:.6s ease;
 }
-/* Hover effects */
 .home-card:hover::before{
-  opacity:.25;
+  opacity:0.22;
   transform:scale(1);
 }
-.home-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(201,164,76,.35);
-}
-/* Ensure text stays above */
-.home-card *{
-  position:relative;
-  z-index:2;
-}
+.home-card *{position:relative;z-index:2;}
 
-/* YOUR WORKING HOVER IMAGES */
+/* HOVER IMAGES */
 .card-mannequins::before{background-image:url("https://i.ibb.co/G4Jq6tqg/your-mannequin.jpg")}
 .card-planters::before{background-image:url("https://i.ibb.co/1GzxnKNm/your-planters.jpg")}
 .card-sculptures::before{background-image:url("https://i.ibb.co/zWmv9ZD2/your-sculptures.jpg")}
@@ -192,40 +230,55 @@ nav a:hover{color:var(--gold)}
 
 /* FOOTER */
 footer{
-  padding:30px 8%;
+  padding:40px 8%;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.06);
-  font-size:.8rem;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:0.85rem;
   color:var(--muted);
+  backdrop-filter:blur(10px);
 }
 .social{
-  margin-bottom:10px;
+  margin-bottom:16px;
 }
 .social a{
-  margin:0 14px;
-  font-size:1rem;
+  margin:0 18px;
+  font-size:1.1rem;
   color:var(--gold);
-  transition:.3s;
+  transition:all .3s ease;
 }
 .social a:hover{
-  transform:translateY(-3px);
-  opacity:.85;
+  transform:translateY(-4px) scale(1.1);
+  text-shadow:0 0 15px rgba(201,164,76,0.5);
 }
 
 /* WHATSAPP */
 .whatsapp{
   position:fixed;
-  right:22px;
-  bottom:22px;
-  background:#25D366;
+  right:25px;
+  bottom:25px;
+  background:linear-gradient(135deg, #25D366, #128C7E);
   color:#fff;
-  padding:14px 18px;
+  padding:16px 20px;
   border-radius:50px;
-  font-size:.85rem;
-  transition:.3s;
+  font-size:0.9rem;
+  font-weight:500;
+  transition:all .3s ease;
   z-index:999;
+  box-shadow:0 10px 30px rgba(37,211,102,0.4);
 }
-.whatsapp:hover{transform:scale(1.12)}
+.whatsapp:hover{
+  transform:scale(1.15) translateY(-3px);
+  box-shadow:0 15px 40px rgba(37,211,102,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .marquee-section{padding:15px 5%;}
+  .marquee-container{height:160px;}
+  .marquee-image{flex:0 0 220px;}
+  .hero h2{font-size:2.2rem;}
+  .home-grid{gap:28px;}
+}
 </style>
 </head>
 
@@ -241,19 +294,25 @@ footer{
   </nav>
 </header>
 
-<!-- 🔥 CRYSTAL CLEAR AUTO-CHANGING SLIDER -->
-<section class="slider-banner">
-  <div class="slider-inner">
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-  </div>
-  <div class="slider-text">
-    <h3>Premium FRP Collections</h3>
-    <p>Crafted with precision engineering for retail, architecture and design excellence</p>
+<!-- 🔥 SCROLLING MARQUEE - 6 Portrait Images Right-to-Left -->
+<section class="marquee-section">
+  <h3 class="marquee-title">Premium FRP Collections</h3>
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <!-- Duplicates for seamless loop -->
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+    </div>
   </div>
 </section>
 
