@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gemini Mannequins | Premium FRP Mannequins India</title>
-
 <meta name="description" content="Gemini Mannequins – Premium FRP Mannequins for Retail, Fashion & Exhibitions. Male, Female, Life-size & Abstract.">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 :root{
   --bg:#0c0c0c;
@@ -46,17 +42,17 @@ nav a:hover{color:var(--gold)}
 
 /* HERO */
 .hero{
-  padding:110px 8% 80px;
+  padding:120px 8% 90px;
   text-align:center;
 }
 .hero h2{
-  font-size:2.6rem;
+  font-size:2.7rem;
   font-weight:500;
 }
 .hero span{color:var(--gold)}
 .hero p{
-  max-width:760px;
-  margin:22px auto 0;
+  max-width:820px;
+  margin:24px auto 0;
   color:var(--muted);
   font-size:1rem;
 }
@@ -69,7 +65,7 @@ nav a:hover{color:var(--gold)}
   text-align:center;
   font-size:1.9rem;
   color:var(--gold);
-  margin-bottom:30px;
+  margin-bottom:60px;
   font-weight:500;
 }
 
@@ -92,35 +88,72 @@ nav a:hover{color:var(--gold)}
   color:#000;
 }
 
-/* GRID */
-.grid{
+/* PRODUCT GRID - SAME AS INDEX */
+.product-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:32px;
 }
 
-/* CARD */
-.card{
+/* MANNEQUIN CARDS - SAME HOVER EFFECT AS INDEX */
+.mannequin-card{
+  position:relative;
   background:var(--card);
-  border-radius:16px;
-  padding:36px 28px;
+  padding:40px;
+  border-radius:18px;
   border:1px solid rgba(255,255,255,.05);
-  transition:.35s ease;
+  overflow:hidden;
+  transition:.4s ease;
+  text-align:center;
 }
-.card:hover{
+
+.mannequin-card h4{
+  color:var(--gold);
+  font-size:1.15rem;
+  margin-bottom:10px;
+}
+
+.mannequin-card p{
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+/* Hover background layer - SAME AS INDEX */
+.mannequin-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:0;
+  transform:scale(1.06);
+  transition:.55s ease;
+}
+
+/* Hover effects - SAME AS INDEX */
+.mannequin-card:hover::before{
+  opacity:.25;
+  transform:scale(1);
+}
+.mannequin-card:hover{
   transform:translateY(-6px);
   border-color:rgba(201,164,76,.35);
 }
-.card h4{
-  color:var(--gold);
-  font-size:1.1rem;
-  margin-bottom:14px;
+
+/* Ensure text stays above */
+.mannequin-card *{
+  position:relative;
+  z-index:2;
 }
-.card p{
-  font-size:.9rem;
-  color:var(--muted);
-  line-height:1.6;
-}
+
+/* ✅ SPECIFIC MANNEQUIN HOVER IMAGES */
+.card-male::before{background-image:url("https://images.unsplash.com/photo-1607348698920-ffb75fa9d5e8?w=400")}
+.card-female::before{background-image:url("https://images.unsplash.com/photo-1575378302688-7f13e31a8da9?w=400")}
+.card-lifesize::before{background-image:url("https://images.unsplash.com/photo-1602762361497-271e307c7bd0?w=400")}
+.card-abstract::before{background-image:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400")}
+.card-custom::before{background-image:url("https://images.unsplash.com/photo-1607348698920-ffb75fa9d5e8?w=400")}
 
 /* FOOTER */
 footer{
@@ -174,70 +207,43 @@ footer{
 </header>
 
 <section class="hero">
-  <h2>Gemini <span>Mannequins</span></h2>
-  <p>
-    A dedicated mannequin division under Gemini Manufacturing & Co.,
-    delivering premium FRP mannequins for retail, fashion and exhibition spaces.
-  </p>
+  <h2>Premium <span>FRP Mannequins</span></h2>
+  <p>A dedicated mannequin division delivering premium FRP mannequins for retail, fashion and exhibition spaces across India.</p>
 </section>
 
 <section class="section">
-  <h3>Mannequin Categories</h3>
-
-  <!-- SINGLE, CLEAN CATALOG DOWNLOAD -->
+  <h3>Mannequin Collections</h3>
+  
+  <!-- Catalog Download Button -->
   <div class="catalog-cta">
-    <a href="assets/catalogs/gemini-mannequins-catalog.pdf" download>
-      Download Complete Mannequin Catalogue (PDF)
-    </a>
+    <a href="assets/catalogs/gemini-mannequins-catalog.pdf" download>📁 Download Complete Catalog (PDF)</a>
   </div>
 
-  <div class="grid">
-
-    <div class="card">
+  <div class="product-grid">
+    <div class="mannequin-card card-male">
       <h4>Male Mannequins</h4>
-      <p>
-        Designed for menswear retail and fashion displays.
-        <br><br>
-        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/male/ -->
-      </p>
+      <p>Designed for menswear retail and fashion displays with realistic proportions</p>
     </div>
 
-    <div class="card">
+    <div class="mannequin-card card-female">
       <h4>Female Mannequins</h4>
-      <p>
-        Elegant forms for womenswear and premium retail.
-        <br><br>
-        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/female/ -->
-      </p>
+      <p>Elegant forms for womenswear and premium retail environments</p>
     </div>
 
-    <div class="card">
+    <div class="mannequin-card card-lifesize">
       <h4>Life-size Mannequins</h4>
-      <p>
-        Realistic proportions for flagship stores and exhibitions.
-        <br><br>
-        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/life-size/ -->
-      </p>
+      <p>Realistic proportions for flagship stores and exhibitions</p>
     </div>
 
-    <div class="card">
+    <div class="mannequin-card card-abstract">
       <h4>Abstract Mannequins</h4>
-      <p>
-        Contemporary designs for modern and conceptual displays.
-        <br><br>
-        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/abstract/ -->
-      </p>
+      <p>Contemporary designs for modern and conceptual displays</p>
     </div>
 
-    <div class="card">
+    <div class="mannequin-card card-custom">
       <h4>Custom Mannequins</h4>
-      <p>
-        Bespoke poses, finishes and forms made to order.
-        <br><br>
-        <!-- IMAGE PLACEHOLDER: assets/images/mannequins/custom/ -->
-      </p>
+      <p>Bespoke poses, finishes and forms made to order specifications</p>
     </div>
-
   </div>
 </section>
 
@@ -250,9 +256,7 @@ footer{
   © 2026 Gemini Manufacturing & Co.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
 
 </body>
 </html>
