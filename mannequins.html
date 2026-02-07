@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gemini Mannequins | Premium FRP Mannequins India</title>
 <meta name="description" content="Gemini Mannequins – Premium FRP Mannequins for Retail, Fashion & Exhibitions. Male, Female, Life-size & Abstract.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Times+New+Roman:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{
@@ -20,56 +20,195 @@
 body{background:var(--bg);color:var(--text)}
 a{text-decoration:none;color:inherit}
 
-/* HEADER */
+/* HEADER - SHINY GOLDEN */
 header{
   padding:22px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  background:rgba(12,12,12,0.95);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 header h1{
-  font-size:1.35rem;
-  color:var(--gold);
-  font-weight:500;
+  font-family:'Times New Roman', Times, serif;
+  font-size:1.6rem;
+  font-weight:700;
+  background:linear-gradient(45deg, #c9a44c, #f0d4a2, #c9a44c);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation: shine 3s ease-in-out infinite;
+  letter-spacing:1px;
+  text-shadow:0 0 20px rgba(201,164,76,0.5);
+}
+@keyframes shine{
+  0%,100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
 }
 nav a{
-  margin-left:26px;
-  font-size:.9rem;
+  margin-left:28px;
+  font-size:0.92rem;
   color:var(--muted);
+  font-weight:400;
+  position:relative;
 }
 nav a:hover{color:var(--gold)}
+nav a:hover::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:var(--gold);
+}
+
+/* 🔥 EXACT INDEX.HTML MARQUEE SLIDER */
+.marquee-section{
+  padding:25px 8%;
+  background:linear-gradient(135deg, rgba(201,164,76,0.05), rgba(12,12,12,0.8));
+  border-bottom:1px solid rgba(255,255,255,.04);
+  overflow:hidden;
+}
+.marquee-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+.gemini-logo{
+  font-family:'Times New Roman', Times, serif;
+  font-size:2.2rem;
+  font-weight:700;
+  background:linear-gradient(45deg, #c9a44c, #f0d4a2, #e6b800, #c9a44c);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation: shine 4s ease-in-out infinite;
+  letter-spacing:2px;
+  text-shadow:0 0 30px rgba(201,164,76,0.6);
+  margin-bottom:8px;
+}
+.gemini-subtitle{
+  font-family:'Times New Roman', Times, serif;
+  font-size:1rem;
+  font-style:italic;
+  color:var(--gold);
+  font-weight:400;
+  letter-spacing:1px;
+  text-shadow:0 0 15px rgba(201,164,76,0.4);
+}
+.marquee-container{
+  position:relative;
+  height:220px;
+  overflow:hidden;
+}
+.marquee-track{
+  display:flex;
+  height:100%;
+  animation: scrollLeft 35s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-image{
+  flex:0 0 180px;
+  height:100%;
+  margin-right:20px;
+  background-size:cover;
+  background-position:center;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+  transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94) !important;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  position:relative;
+  cursor:pointer;
+}
+.marquee-image:hover{
+  transform: scale(1.08) translateY(-5px) !important;
+  border-color:var(--gold) !important;
+  box-shadow:0 20px 45px rgba(201,164,76,0.4) !important;
+  z-index:10;
+}
+/* SLIDER IMAGES - CHANGE THESE LATER */
+.marquee-image:nth-child(1){background-image:url("https://i.ibb.co/hRQs5jwj/your-male.jpg");}
+.marquee-image:nth-child(2){background-image:url("https://i.ibb.co/Ldy93Mm5/your-female.jpg");}
+.marquee-image:nth-child(3){background-image:url("https://i.ibb.co/DH6Zr6pW/your-lifesize.jpg");}
+.marquee-image:nth-child(4){background-image:url("https://i.ibb.co/j988nxKh/your-abstract.jpg");}
+.marquee-image:nth-child(5){background-image:url("https://i.ibb.co/yFsCb5jM/your-custom.jpg");}
+.marquee-image:nth-child(6){background-image:url("https://i.ibb.co/hRQs5jwj/your-male.jpg");}
+.marquee-image:nth-child(7){background-image:url("https://i.ibb.co/Ldy93Mm5/your-female.jpg");}
+.marquee-image:nth-child(8){background-image:url("https://i.ibb.co/DH6Zr6pW/your-lifesize.jpg");}
+.marquee-image:nth-child(9){background-image:url("https://i.ibb.co/j988nxKh/your-abstract.jpg");}
+.marquee-image:nth-child(10){background-image:url("https://i.ibb.co/yFsCb5jM/your-custom.jpg");}
+.marquee-image:nth-child(11){background-image:url("https://i.ibb.co/hRQs5jwj/your-male.jpg");}
+.marquee-image:nth-child(12){background-image:url("https://i.ibb.co/Ldy93Mm5/your-female.jpg");}
+@keyframes scrollLeft{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-1820px);}
+}
 
 /* HERO */
 .hero{
-  padding:120px 8% 90px;
+  padding:80px 8% 100px;
   text-align:center;
+  position:relative;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:100px;
+  height:3px;
+  background:var(--gold);
+  border-radius:2px;
 }
 .hero h2{
-  font-size:2.7rem;
+  font-size:2.9rem;
   font-weight:500;
+  margin-bottom:24px;
+  letter-spacing:-0.5px;
 }
 .hero span{color:var(--gold)}
 .hero p{
-  max-width:820px;
-  margin:24px auto 0;
+  max-width:780px;
+  margin:0 auto;
   color:var(--muted);
-  font-size:1rem;
+  font-size:1.02rem;
+  line-height:1.7;
 }
 
 /* SECTION */
 .section{
-  padding:90px 8%;
+  padding:100px 8%;
+  position:relative;
 }
 .section h3{
   text-align:center;
-  font-size:1.9rem;
+  font-size:2rem;
   color:var(--gold);
-  margin-bottom:60px;
+  margin-bottom:70px;
   font-weight:500;
+  letter-spacing:0.3px;
+  position:relative;
+}
+.section h3::after{
+  content:"";
+  position:absolute;
+  bottom:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:2px;
+  background:linear-gradient(90deg, var(--gold), transparent);
 }
 
-/* CATALOG CTA */
+/* CATALOG CTA - YOUR ORIGINAL */
 .catalog-cta{
   text-align:center;
   margin-bottom:60px;
@@ -88,14 +227,14 @@ nav a:hover{color:var(--gold)}
   color:#000;
 }
 
-/* PRODUCT GRID - SAME AS INDEX */
+/* PRODUCT GRID - YOUR ORIGINAL */
 .product-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:32px;
 }
 
-/* MANNEQUIN CARDS - SAME HOVER EFFECT AS INDEX */
+/* MANNEQUIN CARDS - YOUR ORIGINAL HOVER EFFECTS */
 .mannequin-card{
   position:relative;
   background:var(--card);
@@ -106,20 +245,17 @@ nav a:hover{color:var(--gold)}
   transition:.4s ease;
   text-align:center;
 }
-
 .mannequin-card h4{
   color:var(--gold);
   font-size:1.15rem;
   margin-bottom:10px;
 }
-
 .mannequin-card p{
   color:var(--muted);
   font-size:.9rem;
   line-height:1.6;
 }
-
-/* Hover background layer - SAME AS INDEX */
+/* YOUR ORIGINAL HOVER */
 .mannequin-card::before{
   content:"";
   position:absolute;
@@ -131,8 +267,6 @@ nav a:hover{color:var(--gold)}
   transform:scale(1.06);
   transition:.55s ease;
 }
-
-/* Hover effects - SAME AS INDEX */
 .mannequin-card:hover::before{
   opacity:.25;
   transform:scale(1);
@@ -141,56 +275,69 @@ nav a:hover{color:var(--gold)}
   transform:translateY(-6px);
   border-color:rgba(201,164,76,.35);
 }
-
-/* Ensure text stays above */
 .mannequin-card *{
   position:relative;
   z-index:2;
 }
-
-/* ✅ SPECIFIC MANNEQUIN HOVER IMAGES */
+/* YOUR ORIGINAL MANNEQUIN IMAGES */
 .card-male::before{background-image:url("https://i.ibb.co/hRQs5jwj/your-male.jpg")}
 .card-female::before{background-image:url("https://i.ibb.co/Ldy93Mm5/your-female.jpg")}
 .card-lifesize::before{background-image:url("https://i.ibb.co/DH6Zr6pW/your-lifesize.jpg")}
 .card-abstract::before{background-image:url("https://i.ibb.co/j988nxKh/your-abstract.jpg")}
 .card-custom::before{background-image:url("https://i.ibb.co/yFsCb5jM/your-custom.jpg")}
 
-/* FOOTER */
+/* FOOTER - ENHANCED */
 footer{
-  padding:30px 8%;
+  padding:40px 8%;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.06);
-  font-size:.8rem;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:0.85rem;
   color:var(--muted);
+  backdrop-filter:blur(10px);
 }
 .social{
-  margin-bottom:10px;
+  margin-bottom:16px;
 }
 .social a{
-  margin:0 14px;
-  font-size:1rem;
+  margin:0 18px;
+  font-size:1.1rem;
   color:var(--gold);
-  transition:.3s;
+  transition:all .3s ease;
 }
 .social a:hover{
-  transform:translateY(-3px);
-  opacity:.85;
+  transform:translateY(-4px) scale(1.1);
+  text-shadow:0 0 15px rgba(201,164,76,0.5);
 }
 
-/* WHATSAPP */
+/* WHATSAPP - ENHANCED */
 .whatsapp{
   position:fixed;
-  right:22px;
-  bottom:22px;
-  background:#25D366;
+  right:25px;
+  bottom:25px;
+  background:linear-gradient(135deg, #25D366, #128C7E);
   color:#fff;
-  padding:14px 18px;
+  padding:16px 20px;
   border-radius:50px;
-  font-size:.85rem;
-  transition:.3s;
+  font-size:0.9rem;
+  font-weight:500;
+  transition:all .3s ease;
   z-index:999;
+  box-shadow:0 10px 30px rgba(37,211,102,0.4);
 }
-.whatsapp:hover{transform:scale(1.12)}
+.whatsapp:hover{
+  transform:scale(1.15) translateY(-3px);
+  box-shadow:0 15px 40px rgba(37,211,102,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .marquee-section{padding:20px 5%;}
+  .marquee-container{height:180px;}
+  .marquee-image{flex:0 0 140px;margin-right:15px;}
+  .gemini-logo{font-size:1.8rem;}
+  .hero h2{font-size:2.2rem;}
+  .product-grid{gap:28px;}
+}
 </style>
 </head>
 
@@ -206,6 +353,30 @@ footer{
   </nav>
 </header>
 
+<!-- 🔥 EXACT INDEX.HTML SLIDER -->
+<section class="marquee-section">
+  <div class="marquee-title">
+    <div class="gemini-logo">MANNEQUINS</div>
+    <div class="gemini-subtitle">Premium FRP Collections</div>
+  </div>
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+      <div class="marquee-image"></div>
+    </div>
+  </div>
+</section>
+
 <section class="hero">
   <h2>Premium <span>FRP Mannequins</span></h2>
   <p>A dedicated mannequin division delivering premium FRP mannequins for retail, fashion and exhibition spaces across India.</p>
@@ -214,11 +385,12 @@ footer{
 <section class="section">
   <h3>Mannequin Collections</h3>
   
-  <!-- Catalog Download Button -->
+  <!-- YOUR ORIGINAL CATALOG BUTTON -->
   <div class="catalog-cta">
     <a href="assets/catalogs/gemini-premium-mannequins-catalog.pdf" download>📁 Download Complete Catalog (PDF)</a>
   </div>
 
+  <!-- YOUR ORIGINAL CARDS WITH HOVER EFFECTS -->
   <div class="product-grid">
     <div class="mannequin-card card-male">
       <h4>Male Mannequins</h4>
