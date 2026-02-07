@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gemini Manufacturing & Co. | Premium FRP Products India</title>
 <meta name="description" content="Gemini Manufacturing & Co. – Premium FRP Mannequins, Planters, Sculptures, Props, Fountains & Architectural Profiles in India.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Times+New+Roman:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{
@@ -16,11 +16,11 @@
   --muted:#9a9a9a;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,serif}
 body{background:var(--bg);color:var(--text)}
 a{text-decoration:none;color:inherit}
 
-/* HEADER */
+/* HEADER - SHINY GOLDEN NAME */
 header{
   padding:22px 8%;
   display:flex;
@@ -34,10 +34,21 @@ header{
   z-index:1000;
 }
 header h1{
-  font-size:1.4rem;
-  color:var(--gold);
-  font-weight:500;
-  letter-spacing:0.5px;
+  font-family:'Times New Roman', Times, serif;
+  font-size:1.6rem;
+  font-weight:700;
+  background:linear-gradient(45deg, #c9a44c, #f0d4a2, #c9a44c);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation: shine 3s ease-in-out infinite;
+  letter-spacing:1px;
+  text-shadow:0 0 20px rgba(201,164,76,0.5);
+}
+@keyframes shine{
+  0%,100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
 }
 nav a{
   margin-left:28px;
@@ -57,7 +68,7 @@ nav a:hover::after{
   background:var(--gold);
 }
 
-/* 🔥 TIGHT PORTRAIT MARQUEE - Seamless loop */
+/* 🔥 TIGHT PORTRAIT MARQUEE */
 .marquee-section{
   padding:25px 8%;
   background:linear-gradient(135deg, rgba(201,164,76,0.05), rgba(12,12,12,0.8));
@@ -66,11 +77,30 @@ nav a:hover::after{
 }
 .marquee-title{
   text-align:center;
-  font-size:1.3rem;
-  color:var(--gold);
   margin-bottom:30px;
-  font-weight:500;
+}
+.gemini-logo{
+  font-family:'Times New Roman', Times, serif;
+  font-size:2.2rem;
+  font-weight:700;
+  background:linear-gradient(45deg, #c9a44c, #f0d4a2, #e6b800, #c9a44c);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation: shine 4s ease-in-out infinite;
+  letter-spacing:2px;
+  text-shadow:0 0 30px rgba(201,164,76,0.6);
+  margin-bottom:8px;
+}
+.gemini-subtitle{
+  font-family:'Times New Roman', Times, serif;
+  font-size:1rem;
+  font-style:italic;
+  color:var(--gold);
+  font-weight:400;
   letter-spacing:1px;
+  text-shadow:0 0 15px rgba(201,164,76,0.4);
 }
 .marquee-container{
   position:relative;
@@ -86,9 +116,9 @@ nav a:hover::after{
   animation-play-state:paused;
 }
 .marquee-image{
-  flex:0 0 180px;  /* ✅ TIGHT portrait width */
+  flex:0 0 180px;
   height:100%;
-  margin-right:20px;  /* Small gaps */
+  margin-right:20px;
   background-size:cover;
   background-position:center;
   border-radius:20px;
@@ -101,7 +131,7 @@ nav a:hover::after{
   border-color:var(--gold);
   box-shadow:0 15px 40px rgba(201,164,76,0.3);
 }
-/* Images 1-6 repeated twice for seamless loop */
+/* Images 1-6 repeated twice */
 .marquee-image:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
 .marquee-image:nth-child(2){background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
 .marquee-image:nth-child(3){background-image:url("https://i.ibb.co/Xkv1BT65/your-sculptures.jpg");}
@@ -116,7 +146,7 @@ nav a:hover::after{
 .marquee-image:nth-child(12){background-image:url("https://i.ibb.co/ZzxTHM2K/your-profiles.jpg");}
 @keyframes scrollLeft{
   0%{transform:translateX(0);}
-  100%{transform:translateX(-1820px);}  /* Exactly matches 6 images width */
+  100%{transform:translateX(-1820px);}
 }
 
 /* HERO */
@@ -283,6 +313,7 @@ footer{
   .marquee-section{padding:20px 5%;}
   .marquee-container{height:180px;}
   .marquee-image{flex:0 0 140px;margin-right:15px;}
+  .gemini-logo{font-size:1.8rem;}
   .hero h2{font-size:2.2rem;}
   .home-grid{gap:28px;}
 }
@@ -292,7 +323,8 @@ footer{
 <body>
 
 <header>
-  <h1>Gemini</h1>
+  <!-- ✨ SHINY GOLDEN HEADER NAME -->
+  <h1>Gemini Manufacturing & Co.</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="mannequins.html">Mannequins</a>
@@ -301,12 +333,15 @@ footer{
   </nav>
 </header>
 
-<!-- 🔥 TIGHT PORTRAIT MARQUEE - Seamless 1-6 loop -->
+<!-- 🔥 TIGHT PORTRAIT MARQUEE -->
 <section class="marquee-section">
-  <h3 class="marquee-title">Premium FRP Collections</h3>
+  <!-- ✨ SHINY GOLDEN GEMINI LOGO -->
+  <div class="marquee-title">
+    <div class="gemini-logo">GEMINI</div>
+    <div class="gemini-subtitle">Manufacturing & Co.</div>
+  </div>
   <div class="marquee-container">
     <div class="marquee-track">
-      <!-- 12 images = 2 perfect seamless loops -->
       <div class="marquee-image"></div>
       <div class="marquee-image"></div>
       <div class="marquee-image"></div>
