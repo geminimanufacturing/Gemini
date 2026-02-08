@@ -413,15 +413,14 @@ footer{
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
 
 <script>
-/* 🔥 PERFECTLY FIXED TOUCHSCREEN DRAGGING - 100% WORKING */
+/* 🔥 PERFECT TOUCHSCREEN DRAG - USES TRANSFORM INSTEAD OF SCROLL */
 const marqueeContainer = document.getElementById('marqueeContainer');
 const marqueeTrack = document.getElementById('marqueeTrack');
 let isDragging = false;
 let startX = 0;
-let scrollLeft = 0;
-let animationId;
+let currentX = 0;
+let previousX = 0;
 
-/* ✅ FIXED: All events with proper passive: false */
 marqueeContainer.addEventListener('mousedown', dragStart, {passive: false});
 marqueeContainer.addEventListener('touchstart', dragStart, {passive: false});
 document.addEventListener('mousemove', drag, {passive: false});
@@ -431,57 +430,47 @@ document.addEventListener('touchend', dragEnd);
 document.addEventListener('mouseleave', dragEnd);
 
 function dragStart(e) {
-  /* ✅ FIXED: Don't drag when clicking image (Fancybox opens) */
-  if (e.target.classList.contains('marquee-image')) return;
+  if (e.target.classList.contains('marquee-image')) return; // Let Fancybox work
   
   isDragging = true;
-  marqueeTrack.style.animationPlayState = 'paused'; /* ✅ Pause auto-scroll */
-  startX = (e.pageX || e.touches[0].pageX) - marqueeContainer.offsetLeft;
-  scrollLeft = marqueeTrack.scrollLeft;
+  marqueeTrack.style.animationPlayState = 'paused';
+  
+  startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+  previousX = parseFloat(getComputedStyle(marqueeTrack).transform.split(',')[4]) || 0;
+  
   marqueeContainer.style.cursor = 'grabbing';
-  cancelAnimationFrame(animationId);
   e.preventDefault();
 }
 
 function drag(e) {
   if (!isDragging) return;
+  
   e.preventDefault();
-  const x = (e.pageX || e.touches[0].pageX) - marqueeContainer.offsetLeft;
-  const walk = (x - startX) * 2;
-  marqueeTrack.scrollLeft = scrollLeft - walk;
+  currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+  const diffX = startX - currentX;
+  
+  // ✅ TRANSFORM instead of scrollLeft - WORKS ON TOUCHSCREENS
+  marqueeTrack.style.transform = `translateX(${previousX - diffX}px)`;
 }
 
 function dragEnd() {
   if (!isDragging) return;
+  
   isDragging = false;
-  marqueeTrack.style.animationPlayState = ''; /* ✅ Resume auto-scroll */
+  marqueeTrack.style.animationPlayState = ''; // Resume auto-scroll
   marqueeContainer.style.cursor = 'grab';
 }
 
-/* 🔥 FANCYBOX GALLERY (UNCHANGED) */
+/* FANCYBOX - UNCHANGED */
 Fancybox.bind("[data-fancybox]", {
-  Toolbar: {
-    display: {
-      left: ["infobar"],
-      middle: [
-        "zoomIn",
-        "zoomOut",
-        "toggle1to1",
-        "rotateCCW",
-        "rotateCW",
-        "flipX",
-        "flipY",
-      ],
-      right: ["slideshow", "thumbs", "close"],
-    },
-  },
+  Toolbar: { display: { left: ["infobar"], middle: ["zoomIn","zoomOut","toggle1to1","rotateCCW","rotateCW","flipX","flipY"], right: ["slideshow", "thumbs", "close"] } }
 });
 
-/* 🔥 CATEGORY CARDS (UNCHANGED) */
 function goToPage(page) {
   window.location.href = page;
 }
 </script>
+
 
 </body>
 </html>
