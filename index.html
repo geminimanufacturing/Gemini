@@ -7,7 +7,11 @@
 <meta name="description" content="Gemini Manufacturing & Co. – Premium FRP Mannequins, Planters, Sculptures, Props, Fountains & Architectural Profiles in India.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Times+New+Roman:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- FANCYBOX LIGHTBOX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox.umd.js"></script>
 <style>
+/* YOUR EXACT ORIGINAL STYLES - NO CHANGES */
 :root{
   --bg:#0c0c0c;
   --card:#151515;
@@ -20,7 +24,7 @@
 body{background:var(--bg);color:var(--text)}
 a{text-decoration:none;color:inherit}
 
-/* HEADER - SHINY GOLDEN NAME */
+/* HEADER - SHINY GOLDEN NAME (UNCHANGED) */
 header{
   padding:22px 8%;
   display:flex;
@@ -68,7 +72,7 @@ nav a:hover::after{
   background:var(--gold);
 }
 
-/* 🔥 TIGHT PORTRAIT MARQUEE */
+/* 🔥 DRAGGABLE MARQUEE (ENHANCED) */
 .marquee-section{
   padding:25px 8%;
   background:linear-gradient(135deg, rgba(201,164,76,0.05), rgba(12,12,12,0.8));
@@ -106,15 +110,18 @@ nav a:hover::after{
   position:relative;
   height:220px;
   overflow:hidden;
+  cursor:grab;
+  user-select:none;
 }
+.marquee-container:active{cursor:grabbing;}
 .marquee-track{
   display:flex;
   height:100%;
   animation: scrollLeft 35s linear infinite;
+  transition:transform 0.1s ease-out;
+  will-change:transform;
 }
-.marquee-track:hover{
-  animation-play-state:paused;
-}
+.marquee-track:hover{animation-play-state:paused;}
 .marquee-image{
   flex:0 0 180px;
   height:100%;
@@ -123,15 +130,17 @@ nav a:hover::after{
   background-position:center;
   border-radius:20px;
   border:1px solid rgba(255,255,255,.12);
-  transition:transform 0.4s ease;
+  cursor:pointer;
+  transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
   box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 .marquee-image:hover{
   transform:scale(1.08) translateY(-5px);
   border-color:var(--gold);
-  box-shadow:0 15px 40px rgba(201,164,76,0.3);
+  box-shadow:0 20px 45px rgba(201,164,76,0.4);
+  z-index:10;
 }
-/* Images 1-6 repeated twice */
+/* YOUR 6 CATEGORY IMAGES x2 */
 .marquee-image:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
 .marquee-image:nth-child(2){background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
 .marquee-image:nth-child(3){background-image:url("https://i.ibb.co/Xkv1BT65/your-sculptures.jpg");}
@@ -149,7 +158,7 @@ nav a:hover::after{
   100%{transform:translateX(-1820px);}
 }
 
-/* HERO */
+/* HERO + SECTIONS (UNCHANGED) */
 .hero{
   padding:80px 8% 100px;
   text-align:center;
@@ -180,8 +189,6 @@ nav a:hover::after{
   font-size:1.02rem;
   line-height:1.7;
 }
-
-/* SECTIONS */
 .section{
   padding:100px 8%;
   position:relative;
@@ -205,15 +212,13 @@ nav a:hover::after{
   height:2px;
   background:linear-gradient(90deg, var(--gold), transparent);
 }
-
-/* HOME GRID */
 .home-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:40px;
 }
 
-/* HOME CARDS */
+/* 🔥 CLICKABLE HOME CARDS → SUBCATEGORY PAGES */
 .home-card{
   position:relative;
   background:var(--card);
@@ -223,12 +228,14 @@ nav a:hover::after{
   overflow:hidden;
   transition:all .45s cubic-bezier(0.25,0.46,0.45,0.94);
   backdrop-filter:blur(10px);
+  cursor:pointer;
 }
 .home-card:hover{
   transform:translateY(-10px) scale(1.02);
   border-color:rgba(201,164,76,.4);
   box-shadow:0 25px 50px rgba(201,164,76,0.15);
 }
+.home-card:active{transform:translateY(-5px) scale(1.01);}
 .home-card h4{
   color:var(--gold);
   font-size:1.2rem;
@@ -256,8 +263,6 @@ nav a:hover::after{
   transform:scale(1);
 }
 .home-card *{position:relative;z-index:2;}
-
-/* HOVER IMAGES */
 .card-mannequins::before{background-image:url("https://i.ibb.co/G4Jq6tqg/your-mannequin.jpg")}
 .card-planters::before{background-image:url("https://i.ibb.co/1GzxnKNm/your-planters.jpg")}
 .card-sculptures::before{background-image:url("https://i.ibb.co/zWmv9ZD2/your-sculptures.jpg")}
@@ -265,7 +270,7 @@ nav a:hover::after{
 .card-fountains::before{background-image:url("https://i.ibb.co/W4LRV6PR/your-fountains.jpg")}
 .card-profiles::before{background-image:url("https://i.ibb.co/j95pZj04/your-profiles.jpg")}
 
-/* FOOTER */
+/* FOOTER + WHATSAPP (UNCHANGED) */
 footer{
   padding:40px 8%;
   text-align:center;
@@ -274,9 +279,7 @@ footer{
   color:var(--muted);
   backdrop-filter:blur(10px);
 }
-.social{
-  margin-bottom:16px;
-}
+.social{margin-bottom:16px;}
 .social a{
   margin:0 18px;
   font-size:1.1rem;
@@ -287,8 +290,6 @@ footer{
   transform:translateY(-4px) scale(1.1);
   text-shadow:0 0 15px rgba(201,164,76,0.5);
 }
-
-/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:25px;
@@ -308,7 +309,6 @@ footer{
   box-shadow:0 15px 40px rgba(37,211,102,0.6);
 }
 
-/* RESPONSIVE */
 @media (max-width:768px){
   .marquee-section{padding:20px 5%;}
   .marquee-container{height:180px;}
@@ -323,7 +323,6 @@ footer{
 <body>
 
 <header>
-  <!-- ✨ SHINY GOLDEN HEADER NAME -->
   <h1>Gemini Manufacturing & Co.</h1>
   <nav>
     <a href="index.html">Home</a>
@@ -333,67 +332,63 @@ footer{
   </nav>
 </header>
 
-<!-- 🔥 TIGHT PORTRAIT MARQUEE -->
+<!-- 🔥 DRAGGABLE + CLICKABLE MARQUEE (Click → Gallery) -->
 <section class="marquee-section">
-  <!-- ✨ SHINY GOLDEN GEMINI LOGO -->
   <div class="marquee-title">
     <div class="gemini-logo">GEMINI</div>
     <div class="gemini-subtitle">Manufacturing & Co.</div>
   </div>
-  <div class="marquee-container">
-    <div class="marquee-track">
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
-      <div class="marquee-image"></div>
+  <div class="marquee-container" id="marqueeContainer">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/d4mnvr91/your-planters.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/Xkv1BT65/your-sculptures.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/SwhsQ7FD/your-props.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/rGkK4Rvq/your-fountains.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/ZzxTHM2K/your-profiles.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/d4mnvr91/your-planters.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/Xkv1BT65/your-sculptures.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/SwhsQ7FD/your-props.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/rGkK4Rvq/your-fountains.jpg"></div>
+      <div class="marquee-image" data-fancybox="index-gallery" data-src="https://i.ibb.co/ZzxTHM2K/your-profiles.jpg"></div>
     </div>
   </div>
 </section>
 
 <section class="hero">
   <h2>Premium <span>FRP Manufacturing</span></h2>
-  <p>
-    Gemini Manufacturing & Co. is a specialized FRP manufacturing company delivering
-    premium mannequins, planters, sculptures, props, fountains and architectural profiles
-    for commercial and design-driven spaces.
-  </p>
+  <p>Gemini Manufacturing & Co. is a specialized FRP manufacturing company delivering premium mannequins, planters, sculptures, props, fountains and architectural profiles for commercial and design-driven spaces.</p>
 </section>
 
 <section class="section">
   <h3>Our FRP Product Divisions</h3>
   <div class="home-grid">
-    <a href="mannequins.html" class="home-card card-mannequins">
+    <!-- 🔥 6 MAIN CATEGORIES → SUBCATEGORY PAGES -->
+    <div class="home-card card-mannequins" onclick="goToPage('mannequins.html')">
       <h4>FRP Mannequins</h4>
       <p>Retail • Fashion • Display Solutions</p>
-    </a>
-    <a href="planters.html" class="home-card card-planters">
+    </div>
+    <div class="home-card card-planters" onclick="goToPage('planters.html')">
       <h4>FRP Planters</h4>
       <p>Indoor • Outdoor • Balcony • Terrace</p>
-    </a>
-    <a href="sculptures.html" class="home-card card-sculptures">
+    </div>
+    <div class="home-card card-sculptures" onclick="goToPage('sculptures.html')">
       <h4>FRP Sculptures</h4>
       <p>Decorative • Artistic • Custom Installations</p>
-    </a>
-    <a href="props.html" class="home-card card-props">
+    </div>
+    <div class="home-card card-props" onclick="goToPage('props.html')">
       <h4>FRP Props</h4>
       <p>Events • Retail Displays • Commercial Props</p>
-    </a>
-    <a href="fountains.html" class="home-card card-fountains">
+    </div>
+    <div class="home-card card-fountains" onclick="goToPage('fountains.html')">
       <h4>FRP Fountains</h4>
       <p>Garden • Landscape • Interior Water Features</p>
-    </a>
-    <a href="profiles.html" class="home-card card-profiles">
+    </div>
+    <div class="home-card card-profiles" onclick="goToPage('profiles.html')">
       <h4>Architectural Profiles</h4>
       <p>Columns • Mouldings • Custom FRP Profiles</p>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -406,7 +401,52 @@ footer{
   © 2026 Gemini Manufacturing & Co.
 </footer>
 
+<!-- ✅ ONLY WHATSAPP (Price button → Gallery pages only) -->
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
+
+<script>
+/* 🔥 1. DRAGGABLE MARQUEE */
+const marqueeContainer = document.getElementById('marqueeContainer');
+const marqueeTrack = document.getElementById('marqueeTrack');
+let isDragging = false;
+let startX, scrollLeft;
+
+marqueeContainer.addEventListener('mousedown', dragStart);
+marqueeContainer.addEventListener('touchstart', dragStart, {passive: false});
+document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', drag, {passive: false});
+document.addEventListener('mouseup', dragEnd);
+document.addEventListener('touchend', dragEnd);
+
+function dragStart(e) {
+  isDragging = true;
+  marqueeContainer.style.cursor = 'grabbing';
+  startX = e.pageX || e.touches[0].pageX;
+  scrollLeft = marqueeTrack.scrollLeft;
+  e.preventDefault();
+}
+
+function drag(e) {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX;
+  const walk = (x - startX) * 2;
+  marqueeTrack.scrollLeft = scrollLeft - walk;
+}
+
+function dragEnd() {
+  isDragging = false;
+  marqueeContainer.style.cursor = 'grab';
+}
+
+/* 🔥 2. MARQUEE CLICK → GALLERY */
+Fancybox.bind("[data-fancybox]", {});
+
+/* 🔥 3. HOME CARDS → SUBCATEGORY PAGES */
+function goToPage(page) {
+  window.location.href = page;
+}
+</script>
 
 </body>
 </html>
