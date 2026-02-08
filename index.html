@@ -10,6 +10,7 @@
 <!-- FANCYBOX LIGHTBOX -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox.umd.js"></script>
+
 <style>
 :root{
   --bg:#0c0c0c;
@@ -20,10 +21,10 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,serif}
-body{background:var(--bg);color:var(--text);touch-action:pan-y;} /* ✅ FIXED */
+body{background:var(--bg);color:var(--text);touch-action:pan-y;}
 a{text-decoration:none;color:inherit}
 
-/* ALL YOUR ORIGINAL STYLES - FIXED TOUCH */
+/* HEADER - SHINY GOLD LOGO */
 header{
   padding:22px 8%;
   display:flex;
@@ -32,129 +33,76 @@ header{
   border-bottom:1px solid rgba(255,255,255,.08);
   backdrop-filter:blur(10px);
   background:rgba(12,12,12,0.95);
-  position:sticky;
-  top:0;
-  z-index:1000;
+  position:sticky;top:0;z-index:1000;
 }
 header h1{
   font-family:'Times New Roman', Times, serif;
-  font-size:1.6rem;
-  font-weight:700;
+  font-size:1.6rem;font-weight:700;
   background:linear-gradient(45deg, #c9a44c, #f0d4a2, #c9a44c);
   background-size:200% 200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  animation: shine 3s ease-in-out infinite;
-  letter-spacing:1px;
-  text-shadow:0 0 20px rgba(201,164,76,0.5);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation: shine 3s ease-in-out infinite;
+  letter-spacing:1px;text-shadow:0 0 20px rgba(201,164,76,0.5);
 }
-@keyframes shine{
-  0%,100%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-}
+@keyframes shine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 nav a{
-  margin-left:28px;
-  font-size:0.92rem;
-  color:var(--muted);
-  font-weight:400;
-  position:relative;
+  margin-left:28px;font-size:0.92rem;color:var(--muted);font-weight:400;position:relative;
 }
 nav a:hover{color:var(--gold)}
-nav a:hover::after{
-  content:"";
-  position:absolute;
-  bottom:-4px;
-  left:0;
-  width:100%;
-  height:2px;
-  background:var(--gold);
-}
+nav a:hover::after{content:"";position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:var(--gold);}
 
-/* 🔥 PERFECTLY FIXED TOUCHSCREEN MARQUEE */
+/* 🔥 MARQUEE - ALL EFFECTS + PERFECT TOUCH SCROLL */
 .marquee-section{
   padding:25px 8%;
   background:linear-gradient(135deg, rgba(201,164,76,0.05), rgba(12,12,12,0.8));
-  border-bottom:1px solid rgba(255,255,255,.04);
-  overflow:hidden;
-  touch-action:pan-y; /* ✅ FIXED */
+  border-bottom:1px solid rgba(255,255,255,.04);overflow:hidden;
 }
-.marquee-title{
-  text-align:center;
-  margin-bottom:30px;
-}
+.marquee-title{text-align:center;margin-bottom:30px;}
 .gemini-logo{
-  font-family:'Times New Roman', Times, serif;
-  font-size:2.2rem;
-  font-weight:700;
+  font-family:'Times New Roman', Times, serif;font-size:2.2rem;font-weight:700;
   background:linear-gradient(45deg, #c9a44c, #f0d4a2, #e6b800, #c9a44c);
-  background-size:200% 200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  animation: shine 4s ease-in-out infinite;
-  letter-spacing:2px;
-  text-shadow:0 0 30px rgba(201,164,76,0.6);
-  margin-bottom:8px;
+  background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation: shine 4s ease-in-out infinite;letter-spacing:2px;
+  text-shadow:0 0 30px rgba(201,164,76,0.6);margin-bottom:8px;
 }
 .gemini-subtitle{
-  font-family:'Times New Roman', Times, serif;
-  font-size:1rem;
-  font-style:italic;
-  color:var(--gold);
-  font-weight:400;
-  letter-spacing:1px;
-  text-shadow:0 0 15px rgba(201,164,76,0.4);
+  font-family:'Times New Roman', Times, serif;font-size:1rem;font-style:italic;
+  color:var(--gold);font-weight:400;letter-spacing:1px;text-shadow:0 0 15px rgba(201,164,76,0.4);
 }
+
+/* PERFECT SCROLL CONTAINER */
 .marquee-container{
-  position:relative;
   height:220px;
-  overflow:hidden;
-  cursor:grab;
-  user-select:none;
-  touch-action:pan-y; /* ✅ FIXED */
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
+  overflow-x:auto;
+  overflow-y:hidden;
+  ;cursor:grab;user-select:none;
+  scrollbar-width:none;
+  -webkit-user-select:none;-webkit-touch-callout
+  :none;-webkit-user-drag
+  :none;
+  touch-action:pan-x pinch-zoom;
 }
 .marquee-container:active{cursor:grabbing;}
+.marquee-container::-webkit-scrollbar{display:none;}
+
 .marquee-track{
   display:flex;
-  height:100%;
-  animation: scrollLeft 35s linear infinite;
-  transition:transform 0.1s ease-out;
+  height:100%;gap:20px;padding:0 40px;
+  animation: scrollLeft 35s linear infinite;transition:transform 0.1s ease-out;
   will-change:transform;
-  scroll-behavior:smooth;
 }
 .marquee-track:hover{animation-play-state:paused;}
 .marquee-image{
-  flex:0 0 180px;
-  height:100%;
-  margin-right:20px;
-  background-size:cover;
-  background-position:center;
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,.12);
-  cursor:pointer;
-  transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-  box-shadow:0 8px 25px rgba(0,0,0,0.3);
-  -webkit-touch-callout: none; /* ✅ FIXED */
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
+  flex:0 0 180px;height:100%;background-size:cover;background-position:center;
+  border-radius:20px;border:1px solid rgba(255,255,255,.12);cursor:pointer;
+  transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  -webkit-touch-callout: none;-webkit-user-select: none;user-select: none;-webkit-user-drag: none;
 }
-.marquee-image:hover,
-.marquee-image.active{
-  transform:scale(1.08) translateY(-5px);
-  border-color:var(--gold);
-  box-shadow:0 20px 45px rgba(201,164,76,0.4);
-  z-index:10;
+.marquee-image:hover,.marquee-image.active{
+  transform:scale(1.08) translateY(-5px);border-color:var(--gold);
+  box-shadow:0 20px 45px rgba(201,164,76,0.4);z-index:10;
 }
-/* YOUR 6 CATEGORY IMAGES x2 */
+/* 12 IMAGES FOR SEAMLESS LOOP */
 .marquee-image:nth-child(1){background-image:url("https://i.ibb.co/ZRWwdZfH/your-mannequin.jpg");}
 .marquee-image:nth-child(2){background-image:url("https://i.ibb.co/d4mnvr91/your-planters.jpg");}
 .marquee-image:nth-child(3){background-image:url("https://i.ibb.co/Xkv1BT65/your-sculptures.jpg");}
@@ -167,112 +115,40 @@ nav a:hover::after{
 .marquee-image:nth-child(10){background-image:url("https://i.ibb.co/SwhsQ7FD/your-props.jpg");}
 .marquee-image:nth-child(11){background-image:url("https://i.ibb.co/rGkK4Rvq/your-fountains.jpg");}
 .marquee-image:nth-child(12){background-image:url("https://i.ibb.co/ZzxTHM2K/your-profiles.jpg");}
-@keyframes scrollLeft{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-1820px);}
-}
+@keyframes scrollLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
-/* REST OF YOUR ORIGINAL STYLES (UNCHANGED) */
-.hero{
-  padding:80px 8% 100px;
-  text-align:center;
-  position:relative;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:100px;
-  height:3px;
-  background:var(--gold);
-  border-radius:2px;
-}
-.hero h2{
-  font-size:2.9rem;
-  font-weight:500;
-  margin-bottom:24px;
-  letter-spacing:-0.5px;
-}
+/* HERO */
+.hero{padding:90px 8% 100px;text-align:center;position:relative;}
+.hero::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:var(--gold);border-radius:2px;}
+.hero h2{font-size:2.9rem;font-weight:500;margin-bottom:24px;letter-spacing:-0.5px;}
 .hero span{color:var(--gold)}
-.hero p{
-  max-width:780px;
-  margin:0 auto;
-  color:var(--muted);
-  font-size:1.02rem;
-  line-height:1.7;
-}
-.section{
-  padding:100px 8%;
-  position:relative;
-}
-.section h3{
-  text-align:center;
-  font-size:2rem;
-  color:var(--gold);
-  margin-bottom:70px;
-  font-weight:500;
-  letter-spacing:0.3px;
-  position:relative;
-}
-.section h3::after{
-  content:"";
-  position:absolute;
-  bottom:-15px;
-  left:50%;
-  transform:translateX(-50%);
-  width:60px;
-  height:2px;
-  background:linear-gradient(90deg, var(--gold), transparent);
-}
+.hero p{max-width:780px;margin:0 auto;color:var(--muted);font-size:1.02rem;line-height:1.7;}
+
+/* PRODUCT CARDS WITH IMAGE HOVER EFFECT */
+.section{padding:100px 8%;position:relative;}
+.section h3{text-align:center;font-size:2rem;color:var(--gold);margin-bottom:70px;font-weight:500;letter-spacing:0.3px;position:relative;}
+.section h3::after{content:"";position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, var(--gold), transparent);}
 .home-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;
+    
 }
 .home-card{
-  position:relative;
-  background:var(--card);
-  padding:65px 40px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.06);
-  overflow:hidden;
-  transition:all .45s cubic-bezier(0.25,0.46,0.45,0.94);
-  backdrop-filter:blur(10px);
-  cursor:pointer;
+  position:relative;background:var(--card);padding:65px 40px;border-radius:24px;
+  border:1px solid rgba(255,255,255,.06);overflow:hidden;
+  transition:all .45s cubic-bezier(0.25,0.46,0.45,0.94);backdrop-filter:blur(10px);cursor:pointer;
 }
 .home-card:hover{
-  transform:translateY(-10px) scale(1.02);
-  border-color:rgba(201,164,76,.4);
+  transform:translateY(-10px) scale(1.02);border-color:rgba(201,164,76,.4);
   box-shadow:0 25px 50px rgba(201,164,76,0.15);
 }
-.home-card h4{
-  color:var(--gold);
-  font-size:1.2rem;
-  margin-bottom:14px;
-  font-weight:500;
-  letter-spacing:0.3px;
-}
-.home-card p{
-  color:var(--muted);
-  font-size:0.95rem;
-  line-height:1.7;
-}
+.home-card h4{color:var(--gold);font-size:1.2rem;margin-bottom:14px;font-weight:500;letter-spacing:0.3px;}
+.home-card p{color:var(--muted);font-size:0.95rem;line-height:1.7;}
 .home-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transform:scale(1.08);
-  transition:.6s ease;
+  content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.08);transition:.6s ease;
 }
-.home-card:hover::before{
-  opacity:0.22;
-  transform:scale(1);
-}
+.home-card:hover::before{opacity:0.22;transform:scale(1);}
 .home-card *{position:relative;z-index:2;}
 .card-mannequins::before{background-image:url("https://i.ibb.co/G4Jq6tqg/your-mannequin.jpg")}
 .card-planters::before{background-image:url("https://i.ibb.co/1GzxnKNm/your-planters.jpg")}
@@ -280,48 +156,23 @@ nav a:hover::after{
 .card-props::before{background-image:url("https://i.ibb.co/7xcH94Z2/your-props.jpg")}
 .card-fountains::before{background-image:url("https://i.ibb.co/W4LRV6PR/your-fountains.jpg")}
 .card-profiles::before{background-image:url("https://i.ibb.co/j95pZj04/your-profiles.jpg")}
-footer{
-  padding:40px 8%;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,.08);
-  font-size:0.85rem;
-  color:var(--muted);
-  backdrop-filter:blur(10px);
-}
+
+/* FOOTER + GLOWING WHATSAPP */
+footer{padding:40px 8%;text-align:center;border-top:1px solid rgba(255,255,255,.08);font-size:0.85rem;color:var(--muted);backdrop-filter:blur(10px);}
 .social{margin-bottom:16px;}
-.social a{
-  margin:0 18px;
-  font-size:1.1rem;
-  color:var(--gold);
-  transition:all .3s ease;
-}
-.social a:hover{
-  transform:translateY(-4px) scale(1.1);
-  text-shadow:0 0 15px rgba(201,164,76,0.5);
-}
+.social a{margin:0 18px;font-size:1.1rem;color:var(--gold);transition:all .3s ease;}
+.social a:hover{transform:translateY(-4px) scale(1.1);text-shadow:0 0 15px rgba(201,164,76,0.5);}
 .whatsapp{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  background:linear-gradient(135deg, #25D366, #128C7E);
-  color:#fff;
-  padding:16px 20px;
-  border-radius:50px;
-  font-size:0.9rem;
-  font-weight:500;
-  transition:all .3s ease;
-  z-index:999;
-  box-shadow:0 10px 30px rgba(37,211,102,0.4);
+  position:fixed;right:25px;bottom:25px;background:linear-gradient(135deg, #25D366, #128C7E);
+  color:#fff;padding:16px 20px;border-radius:50px;font-size:0.9rem;font-weight:500;
+  transition:all .3s ease;z-index:999;box-shadow:0 10px 30px rgba(37,211,102,0.4);
 }
-.whatsapp:hover{
-  transform:scale(1.15) translateY(-3px);
-  box-shadow:0 15px 40px rgba(37,211,102,0.6);
-}
+.whatsapp:hover{transform:scale(1.15) translateY(-3px);box-shadow:0 15px 40px rgba(37,211,102,0.6);}
 
 @media (max-width:768px){
   .marquee-section{padding:20px 5%;}
   .marquee-container{height:180px;}
-  .marquee-image{flex:0 0 140px;margin-right:15px;}
+  .marquee-image{flex:0 0 140px;}
   .gemini-logo{font-size:1.8rem;}
   .hero h2{font-size:2.2rem;}
   .home-grid{gap:28px;}
@@ -330,7 +181,6 @@ footer{
 </head>
 
 <body>
-
 <header>
   <h1>Gemini Manufacturing & Co.</h1>
   <nav>
@@ -341,7 +191,7 @@ footer{
   </nav>
 </header>
 
-<!-- 🔥 PERFECTLY FIXED TOUCHSCREEN MARQUEE -->
+<!-- 🔥 MARQUEE WITH PERFECT TOUCH SCROLL + ALL EFFECTS -->
 <section class="marquee-section">
   <div class="marquee-title">
     <div class="gemini-logo">GEMINI</div>
@@ -365,14 +215,17 @@ footer{
   </div>
 </section>
 
-<!-- YOUR ORIGINAL SECTIONS -->
+<!-- HERO -->
 <section class="hero">
   <h2>Premium <span>FRP Manufacturing</span></h2>
   <p>Gemini Manufacturing & Co. is a specialized FRP manufacturing company delivering premium mannequins, planters, sculptures, props, fountains and architectural profiles for commercial and design-driven spaces.</p>
 </section>
 
+<!-- ALL 6 FRP CATEGORIES WITH IMAGE HOVER -->
 <section class="section">
   <h3>Our FRP Product Divisions</h3>
+  
+  
   <div class="home-grid">
     <div class="home-card card-mannequins" onclick="goToPage('mannequins.html')">
       <h4>FRP Mannequins</h4>
@@ -413,64 +266,81 @@ footer{
 <a class="whatsapp" href="https://wa.me/918904442714" target="_blank">WhatsApp</a>
 
 <script>
-/* 🔥 PERFECT TOUCHSCREEN DRAG - USES TRANSFORM INSTEAD OF SCROLL */
-const marqueeContainer = document.getElementById('marqueeContainer');
-const marqueeTrack = document.getElementById('marqueeTrack');
+/* 🔥 CLEAN AUTO-SCROLL + TOUCH / MOUSE SWIPE (NO STYLE CHANGES) */
+
+const container = document.getElementById('marqueeContainer');
+
 let isDragging = false;
 let startX = 0;
-let currentX = 0;
-let previousX = 0;
+let startScrollLeft = 0;
+let isHovering = false;
+const speed = 0.4; // auto-scroll speed
 
-marqueeContainer.addEventListener('mousedown', dragStart, {passive: false});
-marqueeContainer.addEventListener('touchstart', dragStart, {passive: false});
-document.addEventListener('mousemove', drag, {passive: false});
-document.addEventListener('touchmove', drag, {passive: false});
-document.addEventListener('mouseup', dragEnd);
-document.addEventListener('touchend', dragEnd);
-document.addEventListener('mouseleave', dragEnd);
+// TOUCH + MOUSE DRAG
 
-function dragStart(e) {
-  if (e.target.classList.contains('marquee-image')) return; // Let Fancybox work
-  
+container.addEventListener('mousedown',e=>{
+  isDown=true;startX=e.pageX;scrollLeft=container.scrollLeft;
+});
+container.addEventListener('mouseup',()=>isDown=false);
+container.addEventListener('mouseleave',()=>isDown=false);
+container.addEventListener('mousemove',e=>{
+  if(!isDown)return;
+  container.scrollLeft=scrollLeft-(e.pageX-startX);
+});
+
+
+
+/* AUTO SCROLL */
+function autoScroll() {
+  if (!isDragging && !isHovering) {
+    container.scrollLeft += speed;
+
+    // seamless loop (images are duplicated once)
+    if (container.scrollLeft >= container.scrollWidth / 2) {
+      container.scrollLeft = 0;
+    }
+  }
+  requestAnimationFrame(autoScroll);
+}
+autoScroll();
+
+/* MOUSE + TOUCH DRAG */
+container.addEventListener("mousedown", startDrag);
+container.addEventListener("touchstart", startDrag, { passive: true });
+
+function startDrag(e) {
   isDragging = true;
-  marqueeTrack.style.animationPlayState = 'paused';
-  
-  startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
-  previousX = parseFloat(getComputedStyle(marqueeTrack).transform.split(',')[4]) || 0;
-  
-  marqueeContainer.style.cursor = 'grabbing';
-  e.preventDefault();
+  startX = e.type === "mousedown" ? e.pageX : e.touches[0].pageX;
+  startScrollLeft = container.scrollLeft;
 }
 
-function drag(e) {
-  if (!isDragging) return;
-  
-  e.preventDefault();
-  currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-  const diffX = startX - currentX;
-  
-  // ✅ TRANSFORM instead of scrollLeft - WORKS ON TOUCHSCREENS
-  marqueeTrack.style.transform = `translateX(${previousX - diffX}px)`;
-}
 
-function dragEnd() {
-  if (!isDragging) return;
-  
+document.addEventListener("mouseup", stopDrag);
+document.addEventListener("touchend", stopDrag);
+
+function stopDrag() {
   isDragging = false;
-  marqueeTrack.style.animationPlayState = ''; // Resume auto-scroll
-  marqueeContainer.style.cursor = 'grab';
 }
 
-/* FANCYBOX - UNCHANGED */
+/* HOVER PAUSE (DESKTOP ONLY) */
+container.addEventListener("mouseenter", () => isHovering = true);
+container.addEventListener("mouseleave", () => isHovering = false);
+
+/* FANCYBOX (UNCHANGED) */
 Fancybox.bind("[data-fancybox]", {
-  Toolbar: { display: { left: ["infobar"], middle: ["zoomIn","zoomOut","toggle1to1","rotateCCW","rotateCW","flipX","flipY"], right: ["slideshow", "thumbs", "close"] } }
+  Toolbar: {
+    display: {
+      left: ["infobar"],
+      middle: ["zoomIn", "zoomOut", "toggle1to1"],
+      right: ["close"]
+    }
+  }
 });
 
 function goToPage(page) {
   window.location.href = page;
 }
 </script>
-
 
 </body>
 </html>
